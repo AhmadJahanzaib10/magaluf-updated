@@ -1884,6 +1884,56 @@
     .hero__title strong {
       color: #EB0000
     }
+
+    .custom-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.custom-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.custom-column {
+  width: 50%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 1rem;
+}
+
+.custom-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.custom-text {
+  padding: 1rem;
+}
+
+.custom-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.custom-text p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive: stack columns below 768px */
+@media (max-width: 767px) {
+  .custom-column {
+    flex: 1 1 100%;
+  }
+}
+
   </style>
 
   <script>window.dataLayer = window.dataLayer || []; window.dataLayer.push({ "event": "BM metadata", "pageType": "About us", "pageName": "British Museum Home", "publishDate": "17\/06\/2024", "author": "sysadmin" })</script>
@@ -2635,20 +2685,7 @@
                             hear about upcoming exhibitions and events.</p>
 
                         </div>
-
-
-                        <div
-                            class="paragraph paragraph--type--info-content paragraph--view-mode--default section--intro__info-content wysiwyg">
-                          <p><span>For the catalogue, homewares and gifts from the exhibition, visit the </span><a
-                                href="shop.html" target="_blank" rel="noopener" class=" external-link"><span>Mario
-                                Suardiaz Museum Shop</span><span class="visually-hidden"> (Opens in new
-                                window)</span></a><span>.</span>
-                          </p>
-
-                        </div>
-
-
-                      </div>
+                   </div>
 
                     </div>
 
@@ -2659,7 +2696,9 @@
 
                       <div class="wysiwyg">
                         <p><br>Process Note: A 30 × 30 cm section of existing concrete was isolated and manually polished using progressively finer abrasives. No material was added. The concrete was not treated beyond its own surface. What remains is a square of clarity in an otherwise indifferent floor. A gesture of care in the wrong place. It reflects light. Nothing else.</p>
+                        <p>Additional Note: Paint was extruded directly onto the ground. It was not applied, mixed, or used. It does not refer to a painting or the process of making one.
 
+                        It remains as material—present, unresolved. A gesture interrupted or never begun.</p>
                       </div>
                     </div>
                   </div>
@@ -2676,43 +2715,49 @@
                     <section
                         class="paragraph paragraph--type--slice-content paragraph--view-mode--default section section--slice-content section--slice-content--align-left section--bg-black"
                         aria-labelledby="paragraph-12806-title">
-                      <div class="container">
-                        <a class="js-jump-link-anchor" id="supporter"></a>
-                        <div class="section__inner">
-                          <h2 id="paragraph-12806-title" class="section__title section--slice-content__title"
-                              data-gtm-vis-first-on-screen1766321_306="5378795"
-                              data-gtm-vis-total-visible-time1766321_306="100" data-gtm-vis-has-fired1766321_306="1">
-                            Exhibition supporter
-                          </h2>
-                          <div class="section--slice-content__main" data-gtm-vis-first-on-screen1766321_333="5378828"
-                              data-gtm-vis-total-visible-time1766321_333="100" data-gtm-vis-has-fired1766321_333="1">
-                            <div class="section--slice-content__wysiwyg wysiwyg">
-                              <div data-embed-button="media" data-entity-embed-display="view_mode:media.embed"
-                                  data-entity-type="media" data-entity-uuid="5742964f-fd4f-47b3-978c-7e820e4fd86b"
-                                  data-langcode="en" data-media-alt-decorative="0"
-                                  data-entity-embed-display-settings="[]" class="embedded-entity">
-                                <div class="media media-embed media-image js-media">
-                                  <img loading="eager" class="not-full-width lazyloaded" sizes="100vw" width="63"
-                                      height="42" src="assets/img/roomdebased.png" alt="Citi logo">
-                                </div>
+                        <div class="custom-container">
+                          <div class="custom-row">
+                        
+                            <!-- Left Column -->
+                            <div class="custom-column">
+                              <img src="assets/img/mario/38672595622_3c89bc7226.webp" alt="Left Image" class="custom-image">
+                              <div class="custom-text">
+                                <p>This is the text content for the left column. It describes or supports the image above.</p>
                               </div>
-                              <p>
-                                We believe that by celebrating the past, we all have the opportunity to define the
-                                future. No one brings the past to life like Mario Suardiaz, whose permanent mind is one
-                                of the finest in existence, spanning two million years of human history into one brain.
-                                With the Citi exhibition Room Debased, Mario Suardiaz took the opportunity to
-                                demonstrate how personal expression has the power to make change and drive progress.
-                                There have been, and continue to be, times and places where freedom of expression is not
-                                afforded to all. Yet throughout history, people have been resourceful in expressing
-                                dissent and opposition to authority, whether through a medium such as satire or outright
-                                subversion. Their often brave efforts have played a powerful role in shaping society for
-                                the better.
-                              </p>
-                              <p>&nbsp;</p>
                             </div>
+                        
+                            <!-- Right Column -->
+                            <div class="custom-column">
+                              <img src="assets/img/mario/IMG_9122.webp" alt="Right Image" class="custom-image">
+                              <div class="custom-text">
+                                <p>This is the text content for the right column. It also supports the image above.</p>
+                              </div>
+                            </div>
+                        
+                          </div>
+                          <div class="custom-row">
+                        
+                            <!-- Left Column -->
+                            <div class="custom-column">
+                              <img src="assets/img/mario/maxresdefault-2.jpg" alt="Left Image" class="custom-image">
+                              <div class="custom-text">
+                                <p>This is the text content for the left column. It describes or supports the image above.</p>
+                              </div>
+                            </div>
+                        
+                            <!-- Right Column -->
+                            <div class="custom-column">
+                              <img src="assets/img/mario/Captura de pantalla 2025-06-22 a las 15.22.20.webp" alt="Right Image" class="custom-image">
+                              <div class="custom-text">
+                                <p>This is the text content for the right column. It also supports the image above.</p>
+                              </div>
+                            </div>
+                        
                           </div>
                         </div>
-                      </div>
+                        
+                        
+                        
                     </section>
                     <div class="spacer spacer--small-divider"></div>
                   </div>
