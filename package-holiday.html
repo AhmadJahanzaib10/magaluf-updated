@@ -2575,6 +2575,119 @@
             </div>
           </div>
           <div>
+            <section class="ytvdo">
+              <style>
+                .ytvdo {
+                  background-color: #000;
+                  padding: 70px 0;
+                }
+              </style>
+              <div class="container">
+                <a class="js-jump-link-anchor" id="explore"></a>
+                <div class="row justify-content-center align-items-center g-2">
+                  <div class="col">
+
+                    <style>
+                      .video-wrapper {
+                        position: relative;
+                        width: 100%;
+                        max-width: 100%;
+                        cursor: pointer;
+                      }
+
+                      .thumbnail-container {
+                        position: relative;
+                        width: 100%;
+                        max-width: 100%;
+                        padding-bottom: 56.25%;
+                        /* 16:9 Aspect Ratio */
+                        height: 0;
+                        overflow: hidden;
+                      }
+
+                      .thumbnail-container img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        cursor: pointer;
+                      }
+
+                      .play-button {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 80px;
+                        height: 80px;
+                        background-color: white;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                      }
+
+                      .play-button::after {
+                        content: "▶";
+                        font-size: 36px;
+                        color: #000;
+                      }
+
+                      .video-container {
+                        position: relative;
+                        width: 100%;
+                        max-width: 100%;
+                        padding-bottom: 56.25%;
+                        /* 16:9 Aspect Ratio */
+                        height: 0;
+                        overflow: hidden;
+                        display: none;
+                      }
+
+                      .video-container iframe {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                      }
+                    </style>
+
+                    <div class="video-wrapper" onclick="playVideo()">
+                      <!-- থাম্বনেইল -->
+                      <div class="thumbnail-container">
+                        <img id="thumbnail" src="assets/img/package-holiday-Inevitable-poster.png"
+                            alt="Video Thumbnail" style="object-fit: cover; object-position: top;">
+                      </div>
+                      <div class="play-button"></div>
+                    </div>
+
+                    <!-- ভিডিও কন্টেইনার -->
+                    <div class="video-container" id="videoContainer">
+                      <iframe id="youtubeVideo" title="YouTube video player" frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen>
+                      </iframe>
+                    </div>
+                    <p style="margin-top: 10px;"><em>Some Tourists</em> (2025), filmed by Jacques Rogers & Catherine Osterberg, reframed and edited by Mario Suardiaz as part of <em>Package Holiday Inevitable</em>, Magaluf, 2022, single-channel SD video, 58 min</p>
+
+                    <script>
+                      function playVideo() {
+                        document.querySelector(".video-wrapper").style.display = "none"; // থাম্বনেইল লুকাবে
+                        document.getElementById("videoContainer").style.display = "block"; // ভিডিও দেখাবে
+
+                        // ভিডিও URL সেট করে সাথে সাথে চালু করা হবে
+                        document.getElementById("youtubeVideo").src = "https://www.youtube.com/embed/EX7hQRJGYmQ?autoplay=1";
+                      }
+                    </script>
+
+
+                  </div>
+                </div>
+              </div>
+            </section>
             <div id="block-jumplinkblock">
               <nav class="section--bg-black section section--no-padding-bottom" aria-labelledby="jump-links">
                 <h2 id="jump-links" class="visually-hidden">Jump links</h2>
@@ -2613,50 +2726,6 @@
                 <div class="section__inner">
                   <div class="section--intro__container">
                     <div class="section--intro__info">
-                      <h2 class="section--intro__info-title"> Past exhibition</h2>
-                      <div class="section--intro__info-slices">
-                        <div
-                            class="paragraph paragraph--type--info-content paragraph--view-mode--default section--intro__info-content wysiwyg">
-                          <p>#LuxuryAndPowerExhibition</p>
-                        </div>
-                        <div
-                            class="paragraph paragraph--type--info-content paragraph--view-mode--default section--intro__info-content wysiwyg">
-                          <h3 class="section--intro__info-content-title">
-                            <svg class="icon icon--calendar" role="presentation" focusable="false" aria-hidden="true">
-                              <use xlink:href="#sprite-icon-calendar"></use>
-                            </svg>
-                            10 August 2022
-                          </h3>
-                        </div>
-                        <div
-                            class="paragraph paragraph--type--info-content paragraph--view-mode--default section--intro__info-content wysiwyg">
-                          <h3 class="section--intro__info-content-title">
-                            <svg class="icon icon--pin" role="presentation" focusable="false" aria-hidden="true">
-                              <use xlink:href="#sprite-icon-pin"></use>
-                            </svg>
-                            Magaluf Beach
-                          </h3>
-                          <!-- <p>The Joseph Hotung Great Court Gallery</p> -->
-                        </div>
-                        <div
-                            class="intro-link--button paragraph paragraph--type--info-link paragraph--view-mode--default">
-                          <a data-tracking="exhibition-cta" class="button button--chevron" href="past-exhibitions.html">
-                            <span>See current exhibitions</span>
-                          </a>
-                        </div>
-                        <div
-                            class="paragraph paragraph--type--info-content paragraph--view-mode--default section--intro__info-content wysiwyg">
-                          <p><a href="email.html" target="_blank" rel="noopener" class=" external-link">Sign up to our
-                              emails<span class="visually-hidden"> (Opens in new window)</span></a> and be the first to
-                            hear
-                            about upcoming exhibitions and events.</p>
-                        </div>
-                        <div
-                            class="paragraph paragraph--type--info-content paragraph--view-mode--default section--intro__info-content wysiwyg">
-                          <p>For the catalogue, homewares and gifts from the exhibition, visit the <a href="shop.html"
-                                target="_blank" rel="noopener" class=" external-link">Mario Suardiaz Museum Shop<span
-                                  class="visually-hidden"> (Opens in new window)</span></a>.</p>
-                        </div>
                       </div>
                     </div>
                     <div class="section--intro__content">
@@ -2680,120 +2749,6 @@
 
                     <!-- <div class="spacer spacer--small-divider"></div> -->
 
-                    <section class="ytvdo">
-                      <style>
-                        .ytvdo {
-                          background-color: #000;
-                          padding: 70px 0;
-                        }
-                      </style>
-                      <div class="container">
-                        <a class="js-jump-link-anchor" id="explore"></a>
-                        <div class="row justify-content-center align-items-center g-2">
-                          <div class="col">
-                            <h2 style="margin-bottom: 3rem">Explore</h2>
-
-                            <style>
-                              .video-wrapper {
-                                position: relative;
-                                width: 100%;
-                                max-width: 100%;
-                                cursor: pointer;
-                              }
-
-                              .thumbnail-container {
-                                position: relative;
-                                width: 100%;
-                                max-width: 100%;
-                                padding-bottom: 56.25%;
-                                /* 16:9 Aspect Ratio */
-                                height: 0;
-                                overflow: hidden;
-                              }
-
-                              .thumbnail-container img {
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                width: 100%;
-                                height: 100%;
-                                object-fit: cover;
-                                cursor: pointer;
-                              }
-
-                              .play-button {
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                transform: translate(-50%, -50%);
-                                width: 80px;
-                                height: 80px;
-                                background-color: white;
-                                border-radius: 50%;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                              }
-
-                              .play-button::after {
-                                content: "▶";
-                                font-size: 36px;
-                                color: #000;
-                              }
-
-                              .video-container {
-                                position: relative;
-                                width: 100%;
-                                max-width: 100%;
-                                padding-bottom: 56.25%;
-                                /* 16:9 Aspect Ratio */
-                                height: 0;
-                                overflow: hidden;
-                                display: none;
-                              }
-
-                              .video-container iframe {
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                width: 100%;
-                                height: 100%;
-                              }
-                            </style>
-
-                            <div class="video-wrapper" onclick="playVideo()">
-                              <!-- থাম্বনেইল -->
-                              <div class="thumbnail-container">
-                                <img id="thumbnail" src="assets/img/package-holiday-Inevitable-poster.png"
-                                    alt="Video Thumbnail" style="object-fit: cover; object-position: top;">
-                              </div>
-                              <div class="play-button"></div>
-                            </div>
-
-                            <!-- ভিডিও কন্টেইনার -->
-                            <div class="video-container" id="videoContainer">
-                              <iframe id="youtubeVideo" title="YouTube video player" frameborder="0"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowfullscreen>
-                              </iframe>
-                            </div>
-                            <p style="margin-top: 10px;"><em>Some Tourists</em> (2025), filmed by Jacques Rogers & Catherine Osterberg, reframed and edited by Mario Suardiaz as part of <em>Package Holiday Inevitable</em>, Magaluf, 2022, single-channel SD video, 58 min</p>
-
-                            <script>
-                              function playVideo() {
-                                document.querySelector(".video-wrapper").style.display = "none"; // থাম্বনেইল লুকাবে
-                                document.getElementById("videoContainer").style.display = "block"; // ভিডিও দেখাবে
-
-                                // ভিডিও URL সেট করে সাথে সাথে চালু করা হবে
-                                document.getElementById("youtubeVideo").src = "https://www.youtube.com/embed/EX7hQRJGYmQ?autoplay=1";
-                              }
-                            </script>
-
-
-                          </div>
-                        </div>
-                      </div>
-                    </section>
 
                     <!-- <div class="spacer spacer--small-divider"></div> -->
                     <section
@@ -2811,13 +2766,13 @@
                                 <li class="paragraph paragraph--type--review-item paragraph--view-mode--default l-grid__item swiper-slide review-slice__item"
                                     style="">
                                   <div class="review-slice__content review-slice__content--has-quote">
-                                    <div class="review-slice__rating review-slice__rating--4">
-                                      <span class="visually-hidden"> 4
+                                    <div class="review-slice__rating review-slice__rating--2">
+                                      <span class="visually-hidden"> 2
                                         of 5 stars</span>
                                     </div>
                                     <blockquote class="review-slice__quote">
-                                      <p>Dazzling. What the fuck is this?</p>
-                                      <cite> Steve
+                                      <p>Are those Prada?</p>
+                                      <cite> David
                                       </cite>
                                     </blockquote>
                                   </div>
@@ -2839,8 +2794,8 @@
                                 <li class="paragraph paragraph--type--review-item paragraph--view-mode--default l-grid__item swiper-slide review-slice__item"
                                     style="">
                                   <div class="review-slice__content review-slice__content--has-quote">
-                                    <div class="review-slice__rating review-slice__rating--4">
-                                      <span class="visually-hidden"> 4
+                                    <div class="review-slice__rating review-slice__rating--5">
+                                      <span class="visually-hidden"> 5
                                         of 5 stars</span>
                                     </div>
                                     <blockquote class="review-slice__quote">
@@ -2924,6 +2879,29 @@
                                       <span class="media-document__name"><span class="visually-hidden">Download
                                         </span>Some-Tourists-2025-Press-Release.pdf</span>
                                       <div class="media-document__meta">(PDF, 16.5 KB)</div>
+                                    </div>
+                                  </a>
+                                </div>
+                              </div>
+                              <p>No additional commentary is provided. A PDF is available here:</p>
+                              <div data-langcode="en" data-entity-type="media"
+                                  data-entity-uuid="3ee700c4-d056-40c3-971e-b7917534bb6d" data-embed-button="document"
+                                  data-entity-embed-display="view_mode:media.full"
+                                  data-entity-embed-display-settings="[]" class="embedded-entity"
+                                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <div class="media media-full media-document js-media">
+
+                                  <a href="https://ma.magaluf.in/assets/docs/Package-Holiday-Inevitable-No-Comment.pdf" target="_blank" rel="noopener noreferrer" class="media-document__link">
+                                    <div class="media-document__icon-container">
+                                      <svg class="icon icon--download" role="presentation" focusable="false"
+                                          aria-hidden="true">
+                                        <use xlink:href="#sprite-icon-download"></use>
+                                      </svg>
+                                    </div>
+                                    <div class="media-document__content">
+                                      <span class="media-document__name"><span class="visually-hidden">Download
+                                        </span>Package-Holiday-Inevitable-No-Comment.pdf</span>
+                                      <div class="media-document__meta">(PDF, 12.1 KB)</div>
                                     </div>
                                   </a>
                                 </div>
