@@ -180,7 +180,7 @@
     <div class="amf-form-header">
       <h2>Email preferences</h2>
     </div>
-    <form action="https://emails.britishmuseum.org/k/British-Museum/sign_up_form_from_website_box" method="post"
+    <form action="process-form.php" method="post"
         accept-charset="UTF-8">
       <div class="amf-el amf-type-htmlblock" id="amf-el-bm_logo_608">
         <div class="html-block" name="bm_logo_608" id="amf-html-block-bm_logo_608">
@@ -611,155 +611,52 @@
           <script>var RecaptchaOptions = { theme: 'clean' };</script>
           <div class='captcha' name='are_you_a_human__501' id='amf-captcha-are_you_a_human__501'>
             <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-            <div class="g-recaptcha" data-sitekey="6LdvdCUUAAAAAKp_zIqdD5bsG_i6IqdRFBjxKjVW"></div>
+            <div id="g-recaptcha"></div>
           </div>
         </div>
       </div>
-      <div class="amf-el amf-type-button" id="amf-el-submit"><input type="submit" class="button" name="submit"
-            id="submit" value="Submit"></div>
-      <script type="text/javascript" id="0.0870189482949257">
-        (function () {
-          var script = document.getElementById('0.0870189482949257');
-          var form = script.parentNode;
-          var inputs = form.getElementsByTagName('INPUT');
-          var submit_count = 0;
-
-          var enable_double_submit = false;
-
-          for (var i = 0; i < inputs.length; i++) {
-            var my_input = inputs[i];
-            if (my_input.type === 'submit') {
-              var container = my_input.parentNode;
-              if (container.className.match(/enable-double-submit/)) {
-                enable_double_submit = true;
+      <div class="amf-el amf-type-button" id="amf-el-submit"><input type="submit" class="button"
+            id="submit-btn" disabled value="Submit"></div>
+            <script>
+              function enableSubmit() {
+                document.getElementById("submit-btn").disabled = false;
               }
-            }
-          }
+            
+              function onloadCallback() {
+                grecaptcha.render('g-recaptcha', {
+                  'sitekey': '6Le6CnUrAAAAALj0TDrKKWF3earxET1_2qh_l4Mb',
+                  'callback': enableSubmit
+                });
+              }
+            </script>
+            
+            <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+            
 
-          form.addEventListener('submit', function (evt) {
-            if (submit_count >= 1 && !enable_double_submit) {
-              evt.preventDefault();
-            }
-            submit_count++;
-          });
+      <script>
+        const signUpForm = document.querySelector("form");
+        signUpForm.addEventListener("submit",(e)=>{
+          e.preventDefault();
+          const form = e.target;
+  const formData = new FormData(form);
 
-        })();
+  const data = {};
+  formData.forEach((value, key) => {
+    if (data[key]) {
+      // If the key already exists, convert to array or append to existing array
+      if (!Array.isArray(data[key])) {
+        data[key] = [data[key]];
+      }
+      data[key].push(value);
+    } else {
+      data[key] = value;
+    }
+  });
+
+  console.log("Form Submitted:", data);
+  signUpForm.submit();
+        })
       </script>
-    </form>
-  </div>
-  <script>function getQueryVariable(variable) {
-      var query = window.location.search.substring(1);
-      var vars = query.split("&");
-      for (var i = 0; i < vars.length; i++) {
-        var pair = vars[i].split("=");
-        if (pair[0] == variable) { return pair[1]; }
-      }
-      return (false);
-    }
-
-    function setInputValueFromParam(el, value) {
-      if (el.getAttribute('type') === "checkbox") {
-        el.value = "y";
-        el.setAttribute("checked", "checked");
-      }
-      else if (el.getAttribute('type') === "text") {
-        el.value = value;
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-
-      const params = [
-        {
-          id: "amf-input-families__exclusive_emails_for_families_including_special_events_and_activities",
-          name: "families",
-        },
-        {
-          id: "amf-input-schools__dedicated_emails_for_teachers_featuring_school_sessions_visit_planning_and_classroom_resources",
-          name: "learning",
-        },
-        {
-          id: "amf-input-email",
-          name: "email",
-        }
-      ];
-
-      params.forEach(function (param) {
-        let value = getQueryVariable(param.name);
-        let el = document.querySelector('input[id^="' + param.id + '"]');
-
-        if (value && el) {
-          setInputValueFromParam(el, value);
-        }
-      });
-
-      // Add autocomplete to inputs
-      const elementsToUpdate = [
-        {
-          id: "amf-input-first_name",
-          autocomplete: "given-name",
-          required: "true",
-          reqErrorMsg: "Please let us know your first name or initial"
-        },
-        {
-          id: "amf-input-last_name",
-          autocomplete: "family-name",
-          required: "true",
-          reqErrorMsg: "Please let us know your last name"
-        },
-        {
-          id: "amf-input-email",
-          autocomplete: "email",
-          type: "email",
-          required: "true",
-          reqErrorMsg: "Please let us know your email address"
-        }
-      ];
-
-      elementsToUpdate.forEach(function (el) {
-        if (el.autocomplete !== "") {
-          document.querySelector('[id^="' + el.id + '"]').setAttribute('autocomplete', el.autocomplete);
-        }
-        if (el.type) {
-          document.querySelector('[id^="' + el.id + '"]').type = el.type;
-        }
-        if (el.required) {
-          document.querySelector('[id^="' + el.id + '"]').required = "true"
-        }
-        //Set custom error message for required fields
-        if (el.reqErrorMsg) {
-          inputEl = document.querySelector('[id^="' + el.id + '"]');
-          inputEl.addEventListener('invalid', function (event) {
-            if (event.target.validity.valueMissing) {
-              event.target.setCustomValidity(el.reqErrorMsg);
-            }
-          })
-          inputEl.addEventListener('change', function (event) {
-            event.target.setCustomValidity('');
-          })
-        }
-      });
-
-      document.querySelectorAll("input").forEach(input => {
-        input.addEventListener(
-          "invalid",
-          event => {
-            input.classList.add("invalid");
-          },
-          false
-        );
-      });
-    });
-
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Tab") {
-        document.body.classList.add('tabbing');
-      }
-    });
-
-    document.addEventListener("mousedown", function (event) {
-      document.body.classList.remove('tabbing');
-    });</script>
 </body>
 
 </html>
