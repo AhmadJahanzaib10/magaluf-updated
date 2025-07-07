@@ -2591,8 +2591,8 @@
                       <div class="wysiwyg">
                         <p>The original press release for SALON is now considered lost. <br>
                          SALON was prepared and installed in under 20 minutes. The exhibition was assembled using materials found on site or sourced within walking distance. The pineapple was purchased at the Tesco Express located next to the exhibition space. The plinth was already in the room — a handmade structure of unclear origin, left from a previous use. No modifications were made to either element. No transport was arranged. No production budget was allocated. No preparatory documentation exists. The exhibition was not premeditated. It responded to conditions present at the time: available space, available objects, and the potential presence of visitors. The artists described SALON as “a show about space and improvisation.” or the "dignity of das Ding" [2] by Mario Suardiaz. The emphasis was on what could be done with what was already at hand, quickly. The text below, adapted by Richard Parry from public sources, was added later. It relates to the symbolic history of the pineapple in England. It was not intended as a curatorial statement, but as contextual material filed alongside the work. It is included here to satisfy expectations of historical or cultural framing, which remain persistent even when irrelevant.</p>
-                        <p>A sound work was positioned at the threshold of SALON. It remains a vital part of SALON and can be heard [here].</p>
-
+                        <p>A sound work was positioned at the threshold of SALON. It remains a vital part of SALON and can be heard <span id="audioToggle" style="cursor: pointer;">[here]</span>.</p>
+                          <audio src="assets/audio/PlanningApplicationtochangetheuseofLewishamWayCommunityCentre.mp3" hidden id="audio" controls loop></audio>
                       </div>
                     </div>
                   </div>
@@ -2639,7 +2639,7 @@
                         sizes="100vw" width="1480" height="1020" src="assets/img/salon-1.JPG"
                         alt="Landscape image of two children by Queen Victoria">
                       <figcaption>                       
-                        Installation view, SALON, 2022
+                        Installation view, <em>SALON</em>, 2022
                       </figcaption>
 
                     </figure>
@@ -2686,7 +2686,7 @@
                         alt="Two images, one cut from the other, with strips of bending colours, from blue, red and green on a white canvas. ">
 
                       <figcaption>                      
-                        Work detail: Untitled (Pineapple on Plinth)
+                        Work detail: <em>Untitled (Pineapple on Plinth)</em>
                         Found plinth, commercial pineapple with barcode tag.
                         Plinth: approx. 90 × 30 × 30 cm
                       </figcaption>
@@ -3677,7 +3677,14 @@ Location undocumented
   <script src="assets/js/drupal.js" data-cookieconsent="ignore"></script>
   <script src="assets/js/drupal.init.js" data-cookieconsent="ignore"></script>
   <script src="assets/js/script.js"></script>
-
+  <script>
+    const audioToggle = document.getElementById("audioToggle");
+    const audio = document.getElementById("audio")
+    audioToggle.addEventListener("click",()=>{
+      audio.hidden = false;
+      audio.play();
+    })
+  </script>
 </body>
 
 </html>
