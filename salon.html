@@ -2811,7 +2811,7 @@ audio {
                   <div class="paragraph paragraph--type--embedded-media paragraph--view-mode--default">
                     <figure class="media media-embed media-image js-media">
 
-                      <video src="assets/video/Video-Gif-SALON.mp4" width="400" autoplay muted controls loop id="video-salon" style="margin-top: 20rem;"></video>
+                      <video src="assets/video/Video-Gif-SALON.mp4" width="400" autoplay loop id="video-salon" style="margin-top: 20rem;"></video>
 
                     </figure>
 
@@ -3765,22 +3765,14 @@ Location undocumented
     playBtn.addEventListener("click",()=>{
       if(playBtn.getAttribute('state') == "pause"){
         audio.play();
-        playBtn.src = "assets/img/mario/pause.png"
         playBtn.setAttribute("state", "play");
       }
       else{
         audio.pause();
-        playBtn.src = "assets/img/mario/play.png"
         playBtn.setAttribute("state", "pause");
       }
     })
 
-    const video = document.getElementById("video-salon");
-    // if(window.innerWidth < 768){
-    //   console.log("LEss than 768")
-    //   video.setAttribute("autoplay", false);
-    //   video.setAttribute("controls", true);
-    // }
   </script>
 </body>
 
