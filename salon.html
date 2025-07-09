@@ -2628,7 +2628,7 @@ audio {
                          SALON was prepared and installed in under 20 minutes. The exhibition was assembled using materials found on site or sourced within walking distance. The pineapple was purchased at the Tesco Express located next to the exhibition space. The plinth was already in the room — a handmade structure of unclear origin, left from a previous use. No modifications were made to either element. No transport was arranged. No production budget was allocated. No preparatory documentation exists. The exhibition was not premeditated. It responded to conditions present at the time: available space, available objects, and the potential presence of visitors. The artists described SALON as “a show about space and improvisation.” or the "dignity of das Ding" [2] by Mario Suardiaz. The emphasis was on what could be done with what was already at hand, quickly. The text below, adapted by Richard Parry from public sources, was added later. It relates to the symbolic history of the pineapple in England. It was not intended as a curatorial statement, but as contextual material filed alongside the work. It is included here to satisfy expectations of historical or cultural framing, which remain persistent even when irrelevant.</p>
                         <p>A sound work was positioned at the threshold of SALON. It remains a vital part of SALON and can be heard <span id="audioToggle" style="cursor: pointer;">[here]</span>:</p>
                         <div class="audio-container">
-                          <img src="assets/img/mario/play.png" id="playBtn" data-state="pause" alt="">
+                          <!-- <img src="assets/img/mario/play.png" id="playBtn" data-state="pause" alt=""> -->
                           <audio src="assets/audio/PlanningApplicationtochangetheuseofLewishamWayCommunityCentre.mp3" id="audio" controls loop></audio>
                         </div>
                       </div>
@@ -3755,23 +3755,23 @@ Location undocumented
   <script>
     const audioToggle = document.getElementById("audioToggle");
     const audio = document.getElementById("audio")
-    const playBtn = document.getElementById("playBtn")
-    audioToggle.addEventListener("click",()=>{
-      audio.hidden = false;
-      audio.play();
-      playBtn.src = "assets/img/mario/pause.png"
-    })
+    // const playBtn = document.getElementById("playBtn")
+    // audioToggle.addEventListener("click",()=>{
+    //   audio.hidden = false;
+    //   audio.play();
+    //   playBtn.src = "assets/img/mario/pause.png"
+    // })
 
-    playBtn.addEventListener("click",()=>{
-      if(playBtn.getAttribute('state') == "pause"){
-        audio.play();
-        playBtn.setAttribute("state", "play");
-      }
-      else{
-        audio.pause();
-        playBtn.setAttribute("state", "pause");
-      }
-    })
+    // playBtn.addEventListener("click",()=>{
+    //   if(playBtn.getAttribute('state') == "pause"){
+    //     audio.play();
+    //     playBtn.setAttribute("state", "play");
+    //   }
+    //   else{
+    //     audio.pause();
+    //     playBtn.setAttribute("state", "pause");
+    //   }
+    // })
 
   </script>
 </body>
