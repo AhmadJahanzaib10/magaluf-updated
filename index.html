@@ -1884,6 +1884,48 @@
     .hero__title strong {
       color: #EB0000
     }
+    #popupOverlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+
+    #popupBox {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      width: 50%;
+      color: black;
+      text-align: center;
+    }
+
+    #popupBox button {
+      margin-top: 20px;
+      padding: 8px 16px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      display: block;
+      margin: 20px auto 0px auto;
+    }
+
+    #popupBox button:hover {
+      background-color: #555;
+    }
+    @media screen and (max-width: 768px){
+      #popupBox{
+        width: 90%;
+      }
+    }
   </style>
 
   <script>window.dataLayer = window.dataLayer || []; window.dataLayer.push({ "event": "BM metadata", "pageType": "About us", "pageName": "British Museum Home", "publishDate": "17\/06\/2024", "author": "sysadmin" })</script>
@@ -2423,16 +2465,16 @@
               <div class="container">
                 <div class="hero__inner">
                   <div class="hero__content-container hero__content-container--boxed -has-link">
-                    <h1 class="visually-hidden">Welcome to www.mariosuardiaz.com</h1>
-                    <h2 id="paragraph-39949-title" class="hero__title">Welcome to www.mariosuardiaz.com</h2>
+                    <h1 class="visually-hidden">Welcome to www.mariosuardiaz.art</h1>
+                    <h2 id="paragraph-39949-title" class="hero__title">Welcome to www.mariosuardiaz.art</h2>
                     <div class="hero__content">
                       <p>Experience the art of Mario Suardiaz</p>
                     </div>
                     <div class="hero__button-container">
-                      <a href="events.html" class="hero__button button button--chevron"
+                      <button id="book-studio" class="hero__button button button--chevron"
                           data-tracking="homepage-hero-button">
                         <span>Book your studio visit</span>
-                      </a>
+                      </button>
                     </div>
                   </div>
                   <div class="hero__controls">
@@ -2443,8 +2485,8 @@
                       </span>
                     </button>
                     <div class="hero__caption">
-                      <a href="https://www.youtube.com/watch?v=bH1JUT4dVQU" class="hero__caption-button external-link"
-                          target="_blank" rel="noopener">
+                      <a href="#" class="hero__caption-button external-link"
+                          >
                         <svg class="icon icon--audio-description" role="presentation" focusable="false"
                             aria-hidden="true">
                           <use xlink:href="#sprite-icon-audio-description"></use>
@@ -2471,8 +2513,7 @@
                             <span class="hero__caption-close-lines"></span>
                           </span>
                         </button>
-                        <a href="https://www.youtube.com/watch?v=bH1JUT4dVQU"><span>Untitled
-                            (2018)</span></a>
+                        <a href="www.mariosuardiaz.art"><span>Welcome to www.mariosuardiaz.art</span></a>
                       </div>
                     </div>
                   </div>
@@ -2609,7 +2650,7 @@
                                           </h3>
                                           <footer class="teaser__footer">
                                             <ul class="teaser__meta teaser__meta--footer">
-                                              <li class="teaser__meta-item"> <span>Exhibition</span>
+                                              <li class="teaser__meta-item"> <span>Show</span>
                                               </li>
                                               <li class="teaser__meta-item"> <span class="date-display-range">04 October
                                                   2024 &ndash; 18 October 2024</span>
@@ -2644,21 +2685,21 @@
                                               <span>evil or stupid<br aria-hidden="true"><strong>Le
                                                   Borgeous</strong></span>
                                               <span class="visually-hidden">
-                                                . Past exhibition
+                                                . Past show
                                                 .
                                               </span>
                                             </a>
                                           </h3>
                                           <footer class="teaser__footer">
                                             <ul class="teaser__meta teaser__meta--footer">
-                                              <li class="teaser__meta-item"> <span>Exhibition</span>
+                                              <li class="teaser__meta-item"> <span>Show</span>
                                               </li>
                                               <li class="teaser__meta-item"> <span class="date-display-range">04 May
                                                   2024</span>
                                               </li>
                                             </ul>
                                             <div class="teaser__defacer" aria-hidden="true">
-                                              Past exhibition
+                                              Past show
                                             </div>
                                           </footer>
                                         </div>
@@ -3288,7 +3329,7 @@
                               </a>
                             </li> -->
                             <li class="menu-item menu-item--collapsed menu__item--level-1">
-                              <a class="menu__link menu__link--level-1" href="#">
+                              <a class="menu__link menu__link--level-1" href="contact-us.html">
                                 <span>Contact us</span>
                               </a>
                             </li>
@@ -3385,7 +3426,13 @@
         </footer>
         <!-- Footer End -->
 
-
+        <div id="popupOverlay">
+          <div id="popupBox">
+            <h3>Contact to book your studio visit</h3>
+            <a href="mailto:studio@mariosuardiaz.art">studio@mariosuardiaz.art</a>
+            <button id="closePopupBtn">Close</button>
+          </div>
+        </div>
 
       </div>
     </div>
@@ -3444,6 +3491,26 @@
   <script src="assets/js/drupal.js" data-cookieconsent="ignore"></script>
   <script src="assets/js/drupal.init.js" data-cookieconsent="ignore"></script>
   <script src="assets/js/script.js"></script>
+  <script>
+    const openBtn = document.getElementById('book-studio');
+    const closeBtn = document.getElementById('closePopupBtn');
+    const overlay = document.getElementById('popupOverlay');
+
+    openBtn.addEventListener('click', () => {
+      overlay.style.display = 'block';
+    });
+
+    closeBtn.addEventListener('click', () => {
+      overlay.style.display = 'none';
+    });
+
+    // Optional: Close when clicking outside the popup box
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        overlay.style.display = 'none';
+      }
+    });
+  </script>
 
 </body>
 
