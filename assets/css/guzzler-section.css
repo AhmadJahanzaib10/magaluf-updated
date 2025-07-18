@@ -11610,6 +11610,7 @@ fieldset:disabled .btn {
     width: auto !important;
     max-width: inherit !important;
     height: 170px !important;
+    border: 2px solid var(--bs-gray-300);
 }
 .img-box p{
     color: #161719;
