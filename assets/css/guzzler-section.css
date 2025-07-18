@@ -11658,6 +11658,13 @@ fieldset:disabled .btn {
         height: 270px !important;
     }
 }
+@media screen and (min-width: 2000px) {
+    .img-box .img-fix{
+        width: auto !important;
+        max-width: inherit !important;
+        height: 300px !important;
+    }
+}
 @media screen and (max-width: 1199px) {
     .custom-padding{
         padding-left: 4rem;
