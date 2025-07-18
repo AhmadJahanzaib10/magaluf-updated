@@ -11603,13 +11603,18 @@ fieldset:disabled .btn {
 .custom-container{
     background-color: #fff !important;
 }
+.custom-row{
+    padding-top: 1rem;
+}
 .img-box .img-fix{
     width: auto !important;
     max-width: inherit !important;
-    height: inherit !important;
+    height: 170px !important;
 }
 .img-box p{
     color: #161719;
+    font-size: 14px;
+    font-family: 'Helvetica Neue, helvetica, arial, sans-serif';
 }
 @media screen and (max-width: 1199px) {
     .custom-padding{

@@ -8,6 +8,10 @@ window.addEventListener("resize",()=>{
             img.classList.add("w-100");
         })
     }
+    else{
+        img.classList.add("img-fix");
+        img.classList.remove("w-100");
+    }
 })
 
 if(window.innerWidth < 1024){
