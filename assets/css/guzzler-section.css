@@ -6977,15 +6977,15 @@ fieldset:disabled .btn {
 }
 
 .custom-row-gap-0 {
-    custom-row-gap: 0 !important
+    row-gap: 0 !important
 }
 
 .custom-row-custom-gap-1 {
-    custom-row-gap: .25rem !important
+    row-gap: .25rem !important
 }
 
 .custom-row-custom-gap-2 {
-    custom-row-gap: .5rem !important
+    row-gap: .5rem !important
 }
 
 .custom-row-custom-gap-3 {
@@ -11606,6 +11606,9 @@ fieldset:disabled .btn {
 .custom-row{
     padding-top: 1rem;
 }
+.custom-row .custom-col-md-5{
+    padding-top: 2rem;
+}
 .img-box .img-fix{
     width: auto !important;
     max-width: inherit !important;
@@ -11645,7 +11648,14 @@ fieldset:disabled .btn {
     .img-box .img-fix{
         width: auto !important;
         max-width: inherit !important;
-        height: 243px !important;
+        height: 250px !important;
+    }
+}
+@media screen and (min-width: 1650px) {
+    .img-box .img-fix{
+        width: auto !important;
+        max-width: inherit !important;
+        height: 270px !important;
     }
 }
 @media screen and (max-width: 1199px) {
