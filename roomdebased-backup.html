@@ -1884,6 +1884,56 @@
     .hero__title strong {
       color: #EB0000
     }
+
+    .custom-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.custom-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.custom-column {
+  width: 50%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 1rem;
+}
+
+.custom-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.custom-text {
+  padding: 1rem;
+}
+
+.custom-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.custom-text p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive: stack columns below 768px */
+@media (max-width: 767px) {
+  .custom-column {
+    flex: 1 1 100%;
+  }
+}
+
   </style>
 
   <script>window.dataLayer = window.dataLayer || []; window.dataLayer.push({ "event": "BM metadata", "pageType": "About us", "pageName": "British Museum Home", "publishDate": "17\/06\/2024", "author": "sysadmin" })</script>
@@ -1902,21 +1952,6 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon.ico">
   <link rel="icon" type="image/png" href="assets/img/favicon.ico" sizes="32x32">
   <link rel="icon" type="image/png" href="assets/img/favicon.ico" sizes="16x16">
-
-  <style>
-    .section--bg-white .review-slice__rating:after,
-    .section--bg-white .review-slice__rating:before {
-      background-color: #FAA21B;
-    }
-
-    .hero--boxed .hero__button {
-      background-color: #FAA21B;
-    }
-
-    p.carousel--gallery__item-title {
-      text-align: center;
-    }
-  </style>
 
 </head>
 
@@ -2418,54 +2453,58 @@
           <div data-drupal-messages-fallback class="hidden"></div>
         </div>
 
-        <!-- Main Start -->
+
         <main id="main-content" class="js-main">
           <div>
-            <div class="hero--boxed hero--promo-banner paragraph paragraph--type--slice-generic-hero paragraph--view-mode--default hero align_right hero--background-pinned js-hero"
-                role="article" aria-labelledby="paragraph-34642-title">
+            <div class="hero--boxed hero--promo-banner paragraph paragraph--type--slice-generic-hero paragraph--view-mode--default hero align_left hero--background-pinned js-hero"
+                role="article" aria-labelledby="paragraph-12467-title">
               <div class="hero__background">
                 <div class="media media-hero media-image js-media">
                   <picture>
-                    <!--[if IE 9]><video style="display: none;"><![endif]-->
-                    <source srcset="assets/img/wonderwall.jpeg" media="all and (min-width: 1440px)" type="image/jpeg"
-                        width="1600" height="790">
-                    <source srcset="assets/img/wonderwall.jpeg" media="all and (min-width: 1024px)" type="image/jpeg"
-                        width="1300" height="642">
-                    <source srcset="assets/img/wonderwall.jpeg" media="all and (min-width: 768px)" type="image/jpeg"
-                        width="1000" height="1000">
-                    <!--[if IE 9]></video><![endif]-->
-                    <img loading="eager" width="750" height="750" data-focal-position="center left"
-                        src="assets/img/wonderwall.jpeg" alt="wonderwall">
+                    <img loading="eager" width="750" height="750" data-focal-position="center center"
+                        src="assets/img/roomdebased.png" alt="Room Debased">
                   </picture>
                 </div>
               </div>
+              <style>
+                .hero--boxed .hero__button {
+                  background-color: #FF0000;
+                }
+              </style>
               <div class="container">
                 <div class="hero__inner">
                   <div class="hero__content-container hero__content-container--boxed -has-link">
-                    <p class="hero__meta hero__meta--large"> Past exhibition </p>
-                    <h1 id="paragraph-34642-title" class="hero__title"> <strong
-                          style="color: #FAA21B; font-weight: bold;">Wonderwall with
-                        Richard Parry</strong>
-                      at ASP Fair
+                    <!-- <p class="hero__meta hero__meta--large"> The Citi Show</p> -->
+                    <h1 id="paragraph-12467-title" class="hero__title"> <strong style="font-weight: bold;">Room
+                        Debased</strong><br>
+                      <!-- Ian Hislop's
+                      search
+                      for dissent -->
                     </h1>
                     <p class="hero__meta">
                       <span>Exhibition</span>
                       /
-                      <span class="date-display-range">16 December 2023</span>
+                      <span class="date-display-range">Spring/Summer 2023</span>
                     </p>
-                    <div class="hero__button-container" style="background-color: #FAA21B;">
-                      <a href="shows.html#current-shows" data-tracking="exhibition-hero-cta"
+                    <div class="hero__button-container">
+                      <a href="shows.html" data-tracking="exhibition-hero-cta"
                           class="hero__button button button--chevron">
                         <span>See current exhibitions</span>
                       </a>
                     </div>
                     <div class="hero__sponsors">
-                      <div class="paragraph paragraph--type--sponsor paragraph--view-mode--default hero__sponsor">
+                      <div
+                          class="paragraph paragraph--type--sponsor paragraph--view-mode--default hero__sponsor -has-logo">
                         <p class="hero__meta">
                           Supported by
                         </p>
-                        <div>
-                          Mario Suardiaz & Richard Parry
+                        <div class="hero__sponsor-image">
+                          <div style="width:100%">
+                            <div class="media media-embed_no_caption media-image js-media">
+                              <img loading="eager" class="not-full-width ls-is-cached lazyloaded" sizes="100vw"
+                                  width="63" height="42" src="assets/img/roomdebased.png" alt="Room Debased logo">
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -2473,26 +2512,24 @@
                   <div class="hero__controls">
                     <div class="hero__caption | js-hero-caption">
                       <button type="button" class="hero__caption-button | js-hero-caption-btn"
-                          id="hero-image-caption-button-34642" aria-expanded="false"
-                          aria-controls="hero-image-caption-content-34642">
+                          id="hero-image-caption-button-12467" aria-expanded="false"
+                          aria-controls="hero-image-caption-content-12467">
                         <span class="visually-hidden">Show image caption</span>
                         <svg class="icon icon--info" role="presentation" focusable="false" aria-hidden="true">
                           <use xlink:href="#sprite-icon-info"></use>
                         </svg>
                       </button>
-                      <div class="hero__caption-content | js-hero-caption-content" id="hero-image-caption-content-34642"
-                          aria-hidden="true" aria-labelledby="hero-image-caption-button-34642">
+                      <div class="hero__caption-content | js-hero-caption-content" id="hero-image-caption-content-12467"
+                          aria-hidden="true" aria-labelledby="hero-image-caption-button-12467">
                         <button type="button" class="hero__caption-content-close | js-hero-caption-btn"
-                            id="hero-image-caption-close-button-34642" aria-expanded="false"
-                            aria-controls="hero-image-caption-content-34642">
+                            id="hero-image-caption-close-button-12467" aria-expanded="false"
+                            aria-controls="hero-image-caption-content-12467">
                           <span class="visually-hidden">Close image caption</span>
                           <span class="hero__caption-close">
                             <span class="hero__caption-close-lines"></span>
                           </span>
                         </button>
-                        <p>Wonderwall (2023) </p>
-                        <p>Richard Parry & Mario Suardiaz </p>
-                        <!-- <a href="#"><span>Collection online</span></a> -->
+                        <p> Unseen exhibition poster for Room Debased, London, 2023</p>
                       </div>
                     </div>
                   </div>
@@ -2527,8 +2564,8 @@
                         <svg class="icon icon--chevron" role="presentation" focusable="false" aria-hidden="true">
                           <use xlink:href="#sprite-icon-chevron"></use>
                         </svg>
-                        <a href="wonderwall.html" class="breadcrumb__current" aria-current="page">
-                          Wonderwall (2023)
+                        <a href="roomdebased.html" class="breadcrumb__current" aria-current="page">
+                          Room Debased
                         </a>
                       </li>
                     </ul>
@@ -2538,7 +2575,7 @@
                   <h3 class="social-share__title">Share the page</h3>
                   <ul class="social-share__list">
                     <li class="social-share__item">
-                      <a class="social-share__link external-link" href="#r" target="_blank" rel="noopener">
+                      <a class="social-share__link external-link" href="#" target="_blank" rel="noopener">
                         <span class="visually-hidden">Share on Facebook</span>
                         <svg class="icon icon--facebook" role="presentation" focusable="false" aria-hidden="true">
                           <use xlink:href="#sprite-icon-facebook"></use>
@@ -2587,106 +2624,72 @@
                           <use xlink:href="#sprite-icon-chevron"></use>
                         </svg>
                       </button>
-                      <div id="jump-link-content" class="jump-links__content | js-jump-links-content">
-                        <ul class="jump-links__list" role="list">
-                          <!-- <li class="jump-links__item">
-                            <a href="#explore" class="jump-links__link">
-                              <span>Explore</span>
-                            </a>
-                          </li> -->
-                          <li class="jump-links__item">
-                            <a href="#highlights" class="jump-links__link">
-                              <span>Highlights</span>
-                            </a>
-                          </li>
-                          <li class="jump-links__item">
-                            <a href="#access" class="jump-links__link">
-                              <span>Access</span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
                     </div>
                   </div>
                 </div>
               </nav>
+
             </div>
+
+
+
             <div
                 class="paragraph paragraph--type--slice-generic-intro paragraph--view-mode--default section section--intro section--bg-black">
+
               <div class="container">
                 <div class="section__inner">
                   <div class="section--intro__container">
                     <div class="section--intro__info">
-                      <h2 class="section--intro__info-title"> Past exhibition
-                      </h2>
+
+                      <!-- <h2 class="section--intro__info-title"> Past exhibition
+                      </h2> -->
+
+
                       <div class="section--intro__info-slices">
+
                         <div
                             class="paragraph paragraph--type--info-content paragraph--view-mode--default section--intro__info-content wysiwyg">
                           <h3 class="section--intro__info-content-title">
-                            <svg class="icon icon--calendar" role="presentation" focusable="false" aria-hidden="true">
-                              <use xlink:href="#sprite-icon-calendar"></use>
-                            </svg>
-                            16 December 2023
+
+                            Spring/Summer 2023
+
                           </h3>
+
                         </div>
-                        <div
-                            class="paragraph paragraph--type--info-content paragraph--view-mode--default section--intro__info-content wysiwyg">
-                          <h3 class="section--intro__info-content-title">
-                            <svg class="icon icon--pin" role="presentation" focusable="false" aria-hidden="true">
-                              <use xlink:href="#sprite-icon-pin"></use>
-                            </svg>
-                            Conway Hall
-                          </h3>
-                          <p>London</p>
-                        </div>
+
                         <div
                             class="intro-link--button paragraph paragraph--type--info-link paragraph--view-mode--default">
-                          <a data-tracking="exhibition-cta" class="button button--chevron" href="shows.html">
+                          <a data-tracking="exhibition-cta" class="button button--chevron"
+                              href="https://www.britishmuseum.org/exhibitions-events">
                             <span>See current exhibitions</span>
                           </a>
+
+
                         </div>
-                        <div
-                            class="paragraph paragraph--type--info-content paragraph--view-mode--default section--intro__info-content wysiwyg">
-                          <p><a href="email.html" target="_blank" rel="noopener" class=" external-link"><span>Sign up to
-                                our
-                                emails</span><span class="visually-hidden"> (Opens in new window)</span></a><span> and
-                              be the first to hear about upcoming exhibitions and events.&nbsp;</span></p>
-                        </div>
+
 
                         <div
                             class="paragraph paragraph--type--info-content paragraph--view-mode--default section--intro__info-content wysiwyg">
-                          <p>For the catalogue, homewares and gifts from the exhibition, visit the&nbsp;<a
-                                href="new-shop.html" target="_blank" rel="noopener" class=" external-link"> Mario Suardiaz
-                              Museum Shop<span class="visually-hidden"> (Opens in new window)</span></a>.</p>
+                          <p><a href="https://emails.britishmuseum.org/k/British-Museum/sign_up_form_from_website_box?email=&amp;_gl=1*i90vuc*_gcl_aw*R0NMLjE1ODUzMDk1MjEuQ2owS0NRand5UGJ6QlJEc0FSSXNBRmgxNUpaeTZncUxnNmRnenBPanRzUVVxUU1INE05dnFEcHhjSWJPZzctZkJWYVdFMUFfeThZNWJkUWFBZ1pERUFMd193Y0I.%20(https://emails.britishmuseum.org/k/British-Museum/sign_up_form_from_website_box?email=&amp;_gl=1*i90vuc*_gcl_aw*R0NMLjE1ODUzMDk1MjEuQ2owS0NRand5UGJ6QlJEc0FSSXNBRmgxNUpaeTZncUxnNmRnenBPanRzUVVxUU1INE05dnFEcHhjSWJPZzctZkJWYVdFMUFfeThZNWJkUWFBZ1pERUFMd193Y0I"
+                                target="_blank" rel="noopener" class=" external-link">Sign up to our emails<span
+                                  class="visually-hidden"> (Opens in new window)</span></a>&nbsp;and be the first to
+                            hear about upcoming exhibitions and events.</p>
+
                         </div>
-                      </div>
+                   </div>
+
                     </div>
+
                     <div class="section--intro__content">
                       <p class="h3">
-                        Wonderwall (2023)
+                        SCULPTURE IS NOTHING
                       </p>
+
                       <div class="wysiwyg">
-                        <p>
-                          I consider space to be a material.<br>
-                          The articulation of space has come to take precedence over other concerns. I attempt to use
-                          sculptural form to
-                          make space distinct.<br>
-                          Richard Parry &amp; Mario Suardiaz<br><br>
+                        <p><br>Process Note: A 30 × 30 cm section of existing concrete was isolated and manually polished using progressively finer abrasives. No material was added. The concrete was not treated beyond its own surface. What remains is a square of clarity in an otherwise indifferent floor. A gesture of care in the wrong place. It reflects light. Nothing else.</p>
+                        <p>Additional Note: Paint was extruded directly onto the ground. It was not applied, mixed, or used. It does not refer to a painting or the process of making one.
 
-                          Richard Parry &amp; Mario Suardiaz are pleased to present a new sculpture by Richard Parry
-                          &amp; Mario Suardiaz. Made
-                          of of weatherproof steel, Wonderwall (2023) measures 4 meters in height, 17.7 meters in
-                          width, and 18.2 meters
-                          in lenght, and will be installed in Conway Hall's vast exhibition Space.<br><br><br><br>
-                        </p>
-                        <p>
-                          <style>
-                            video {
-                              max-width: 800px;
-                            }
-                          </style>
-
-                        </p>
+                        It remains as material—present, unresolved. A gesture interrupted or never begun.</p>
                       </div>
                     </div>
                   </div>
@@ -2699,862 +2702,53 @@
               <div id="block-numiko-mainpagecontent">
                 <div>
                   <div>
-
-
-
-                    <!-- <section
-                        class="paragraph paragraph--type--slice-teaser paragraph--view-mode--default section section--slice-teaser section--z-index-scope section--has-carousel section--bg-black"
-                        aria-labelledby="paragraph-34920-title">
-                      <div class="container">
-                        <a class="js-jump-link-anchor" id="explore"></a>
-                        <div class="section__inner">
-                          <div class="teaser-listing__container">
-                            <h2 id="paragraph-34920-title" class="section__title teaser-listing__title"
-                                data-gtm-vis-first-on-screen1766321_306="6591"
-                                data-gtm-vis-total-visible-time1766321_306="100" data-gtm-vis-has-fired1766321_306="1">
-                              Explore 'Mario Suardiaz'
-                            </h2>
-                            <div class="carousel-container | js-carousel-container">
-                              <div class="teaser-listing carousel carousel--2-col swiper-container | js-carousel-2-col"
-                                  data-items-length="3" data-slides-to-show="2" style="">
-                                <ul class="l-grid l-grid--3-col | teaser-listing__teasers swiper-wrapper" style="">
-                                  <li class="l-grid__item swiper-slide" style="">
-                                    <div class="teaser teaser--has-meta-top">
-                                      <div class="teaser__wrapper">
-                                        <div class="teaser__image-container">
-                                          <div class="media media-teaser_landscape media-image js-media">
-                                            <img loading="eager" class="lazyautosizes lazyloaded" width="750"
-                                                height="422" data-src="assets/img/wonderwall.jpeg" data-sizes="auto"
-                                                data-srcset="assets/img/wonderwall.jpeg"
-                                                data-focal-position="center center" alt="" sizes="374px"
-                                                srcset="assets/img/wonderwall.jpeg" src="assets/img/wonderwall.jpeg">
-                                            <noscript>
-                                              <img loading="eager" srcset="assets/img/wonderwall.jpeg" width="750"
-                                                  height="422" data-src="assets/img/wonderwall.jpeg" data-sizes="auto"
-                                                  alt="" />
-                                            </noscript>
-                                          </div>
-                                        </div>
-                                        <div class="teaser__content">
-                                          <div class="teaser__content-push">
-                                            <div class="teaser__meta teaser__meta--top">
-                                              <div class="teaser__meta-item">
-                                                <span>Exhibitions and events / 18 July 2023</span>
-                                              </div>
-                                            </div>
-                                            <h3 class="teaser__title">
-                                              <a href="#" class="teaser__anchor">
-                                                <span><span>Burma to Myanmar: 1,500 years of connection and
-                                                    isolation</span>
-                                                </span>
-                                              </a>
-                                            </h3>
-                                            <div class="teaser__summary">
-                                              A story of trade, faith and empire at the crossroads of Southeast Asia.
-                                            </div>
-                                          </div>
-                                          <span class="teaser__button | button button--chevron"> Read more
-                                          </span>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </li>
-                                  <li class="l-grid__item swiper-slide" style="">
-                                    <div class="teaser teaser--has-meta-top">
-                                      <div class="teaser__wrapper">
-                                        <div class="teaser__image-container">
-                                          <div class="media media-teaser_landscape media-image js-media">
-                                            <img loading="eager" class="lazyautosizes lazyloaded" width="750"
-                                                height="422" data-src="assets/img/wonderwall.jpeg" data-sizes="auto"
-                                                data-srcset="assets/img/wonderwall.jpeg"
-                                                data-focal-position="top center" alt="" sizes="374px"
-                                                srcset="assets/img/wonderwall.jpeg">
-                                            <noscript>
-                                              <img loading="eager" srcset="assets/img/wonderwall.jpeg" width="750"
-                                                  height="422" data-src="assets/img/wonderwall.jpeg" data-sizes="auto"
-                                                  alt="" />
-                                            </noscript>
-                                          </div>
-                                        </div>
-                                        <div class="teaser__content">
-                                          <div class="teaser__content-push">
-                                            <div class="teaser__meta teaser__meta--top">
-                                              <div class="teaser__meta-item">
-                                                <span>Exhibitions and events / 13 September 2023</span>
-                                              </div>
-                                            </div>
-                                            <h3 class="teaser__title">
-                                              <a href="assets/img/wonderwall.jpeg" class="teaser__anchor">
-                                                <span><span>Conserving a Burmese offering vessel </span>
-                                                </span>
-                                              </a>
-                                            </h3>
-                                            <div class="teaser__summary">
-                                              Follow Conservation intern Maxim as he prepares a spectacular metre-high
-                                              offering vessel for our latest exhibition.
-                                            </div>
-                                          </div>
-                                          <span class="teaser__button | button button--chevron"> Read more
-                                          </span>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </li>
-                                  <li class="l-grid__item swiper-slide" style="">
-                                    <div class="teaser teaser--has-meta-top">
-                                      <div class="teaser__wrapper">
-                                        <div class="teaser__image-container">
-                                          <div class="media media-teaser_landscape media-image js-media">
-                                            <img loading="eager" class="lazyautosizes lazyloaded" width="750"
-                                                height="422" data-src="assets/img/wonderwall.jpeg" data-sizes="auto"
-                                                data-srcset="assets/img/wonderwall.jpeg"
-                                                data-focal-position="center center" alt="" sizes="374px"
-                                                srcset="assets/img/wonderwall.jpeg" src="assets/img/wonderwall.jpeg">
-                                            <noscript>
-                                              <img loading="eager" srcset="assets/img/wonderwall.jpeg" width="750"
-                                                  height="422" data-src="assets/img/wonderwall.jpeg" data-sizes="auto"
-                                                  alt="" />
-                                            </noscript>
-                                          </div>
-                                        </div>
-                                        <div class="teaser__content">
-                                          <div class="teaser__content-push">
-                                            <div class="teaser__meta teaser__meta--top">
-                                              <div class="teaser__meta-item">
-                                                <span>Exhibitions and events / 1 November 2023</span>
-                                              </div>
-                                            </div>
-                                            <h3 class="teaser__title">
-                                              <a href="#" class="teaser__anchor">
-                                                <span><span>An abundance of riches: Myanmar's many landscapes</span>
-                                                </span>
-                                              </a>
-                                            </h3>
-                                            <div class="teaser__summary">
-                                              Join us on a journey from the snow-capped mountains of the north to the
-                                              tropical rainforests of the south.
-                                            </div>
-                                          </div>
-                                          <span class="teaser__button | button button--chevron"> Read more
-                                          </span>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </li>
-                                </ul>
-                              </div>
-                              <div class="carousel__nav-container carousel__nav-container--inline-buttons">
-                                <button aria-label="Previous slide"
-                                    class="carousel__nav carousel__nav--prev | js-carousel-prev" tabindex="0"
-                                    role="button" aria-disabled="true">
-                                  <svg class="icon icon--chevron icon--chevron-small" role="presentation"
-                                      focusable="false" aria-hidden="true">
-                                    <use xlink:href="#sprite-icon-chevron"></use>
-                                  </svg>
-                                </button>
-                                <div class="carousel__pagination | js-pagination-dots swiper-pagination-clickable"><span
-                                      class="swiper-pagination-bullet" tabindex="0" role="button"
-                                      aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet"
-                                      tabindex="0" role="button" aria-label="Go to slide 2"></span></div>
-                                <button aria-label="Next slide"
-                                    class="carousel__nav carousel__nav--next | js-carousel-next" tabindex="0"
-                                    role="button" aria-disabled="false">
-                                  <svg class="icon icon--chevron icon--chevron-small" role="presentation"
-                                      focusable="false" aria-hidden="true">
-                                    <use xlink:href="#sprite-icon-chevron"></use>
-                                  </svg>
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </section> -->
-
-                    <section
-                        class="paragraph paragraph--type--slice-gallery paragraph--view-mode--default section section--slice-gallery section--bg-black"
-                        aria-labelledby="paragraph-34648-title">
-                      <div class="container">
-                        <a class="js-jump-link-anchor" id="highlights"></a>
-                        <div class="section__inner">
-                          <div
-                              class="carousel--gallery__container | js-carousel-container js-carousel-container--gallery">
-                            <div class="carousel__title-container">
-                              <h2 id="paragraph-34648-title" class="section__title"
-                                  data-gtm-vis-first-on-screen1766321_306="7975"
-                                  data-gtm-vis-total-visible-time1766321_306="100"
-                                  data-gtm-vis-has-fired1766321_306="1">
-                                Highlights
-                              </h2>
-                              <div class="carousel__pagination-fraction js-pagination-fraction">5 / 7</div>
-                            </div>
-                            <div class="carousel carousel--gallery swiper-container | js-carousel-gallery swiper-container-initialized swiper-container-horizontal"
-                                style="cursor: grab;">
-                              <ul class="swiper-wrapper js-photoswipe-container"
-                                  style="transform: translate3d(-2544.28px, 0px, 0px); transition-duration: 0ms;">
-
-                                <li class="swiper-slide carousel--gallery__item" data-swiper-slide-index="0"
-                                    style="margin-right: 50px;">
-                                  <button type="button" class="carousel--gallery__button | js-photoswipe-item"
-                                      data-large-image-url="" data-large-image-width="1600"
-                                      data-large-image-height="1166" data-description="" data-caption="" data-lang=""
-                                      style="text-align: center;">
-                                  </button>
-                                  <div class="carousel--gallery__content">
-                                    <div class="media media-gallery media-image js-media">
-                                      <video autoplay muted loop loading="eager"
-                                          class="not-full-width lazyautosizes ls-is-cached lazyloaded" width="380"
-                                          height="500">
-                                        <source src="assets/video/videos/01.mp4" type="video/mp4">
-                                      </video>
-                                    </div>
-                                    <p class="carousel--gallery__item-title">
-                                      Today
-                                    </p>
-                                  </div>
-                                </li>
-
-                                <li class="swiper-slide carousel--gallery__item" data-swiper-slide-index="1"
-                                    style="margin-right: 50px;">
-                                  <button type="button" class="carousel--gallery__button | js-photoswipe-item"
-                                      data-large-image-url="" data-large-image-width="1600"
-                                      data-large-image-height="1145" data-description="" data-caption="" data-lang="">
-                                  </button>
-                                  <div class="carousel--gallery__content">
-                                    <div class="media media-gallery media-image js-media">
-                                      <video autoplay muted loop loading="eager"
-                                          class="not-full-width lazyautosizes ls-is-cached lazyloaded" width="380"
-                                          height="500">
-                                        <source src="assets/video/videos/02.mp4" type="video/mp4">
-                                      </video>
-                                    </div>
-                                    <p class="carousel--gallery__item-title">
-                                      is
-                                    </p>
-                                  </div>
-                                </li>
-
-                                <li class="swiper-slide carousel--gallery__item" data-swiper-slide-index="2"
-                                    style="margin-right: 50px;">
-                                  <button type="button" class="carousel--gallery__button | js-photoswipe-item"
-                                      data-large-image-url="" data-large-image-width="1454"
-                                      data-large-image-height="1912" data-description="" data-caption="" data-lang="">
-                                  </button>
-
-                                  <div class="carousel--gallery__content">
-                                    <div class="media media-gallery media-image js-media">
-                                      <video autoplay muted loop loading="eager"
-                                          class="not-full-width lazyautosizes ls-is-cached lazyloaded" width="380"
-                                          height="500">
-                                        <source src="assets/video/videos/03.mp4" type="video/mp4">
-                                      </video>
-                                    </div>
-                                    <p class="carousel--gallery__item-title">
-                                      gonna
-                                    </p>
-                                  </div>
-                                </li>
-
-                                <li class="swiper-slide carousel--gallery__item swiper-slide-prev"
-                                    data-swiper-slide-index="3" style="margin-right: 50px;">
-                                  <button type="button" class="carousel--gallery__button | js-photoswipe-item"
-                                      data-large-image-url="" data-large-image-width="1600"
-                                      data-large-image-height="1379" data-description="" data-caption="" data-lang="">
-                                  </button>
-                                  <div class="carousel--gallery__content">
-                                    <div class="media media-gallery media-image js-media">
-                                      <video autoplay muted loop loading="eager"
-                                          class="not-full-width lazyautosizes ls-is-cached lazyloaded" width="380"
-                                          height="500">
-                                        <source src="assets/video/videos/05.mp4" type="video/mp4">
-                                      </video>
-                                    </div>
-                                    <p class="carousel--gallery__item-title">
-                                      be
-                                    </p>
-                                  </div>
-                                </li>
-
-                                <li class="swiper-slide carousel--gallery__item swiper-slide-active"
-                                    data-swiper-slide-index="4" style="margin-right: 50px;">
-                                  <button type="button" class="carousel--gallery__button | js-photoswipe-item"
-                                      data-large-image-url="" data-large-image-width="1600"
-                                      data-large-image-height="750" data-description="" data-caption="" data-lang="">
-                                    <span class="visually-hidden">
-                                      Map showing three Shan states
-
-                                      - opens in a modal which shows a larger image and a caption
-                                    </span>
-                                  </button>
-                                  <div class="carousel--gallery__content">
-                                    <div class="media media-gallery media-image js-media">
-                                      <video autoplay muted loop loading="eager"
-                                          class="not-full-width lazyautosizes ls-is-cached lazyloaded" width="380"
-                                          height="500">
-                                        <source src="assets/video/videos/06.mp4" type="video/mp4">
-                                      </video>
-                                    </div>
-                                    <p class="carousel--gallery__item-title">
-                                      the
-                                    </p>
-                                  </div>
-                                </li>
-
-                                <li class="swiper-slide carousel--gallery__item swiper-slide-next"
-                                    data-swiper-slide-index="5" style="margin-right: 50px;">
-                                  <button type="button" class="carousel--gallery__button | js-photoswipe-item"
-                                      data-large-image-url="" data-large-image-width="1600"
-                                      data-large-image-height="2136" data-description="" data-caption="" data-lang="">
-                                    <span class="visually-hidden">
-                                      Standing Buddha offering a myrobalan fruit
-
-                                      - opens in a modal which shows a larger image and a caption
-                                    </span>
-                                  </button>
-                                  <div class="carousel--gallery__content">
-                                    <div class="media media-gallery media-image js-media">
-                                      <video autoplay muted loop loading="eager"
-                                          class="not-full-width lazyautosizes ls-is-cached lazyloaded" width="380"
-                                          height="500">
-                                        <source src="assets/video/videos/07.mp4" type="video/mp4">
-                                      </video>
-                                    </div>
-                                    <p class="carousel--gallery__item-title">
-                                      day
-                                    </p>
-                                  </div>
-                                </li>
-                                <li class="swiper-slide carousel--gallery__item" data-swiper-slide-index="6"
-                                    style="margin-right: 50px;">
-                                  <button type="button" class="carousel--gallery__button | js-photoswipe-item"
-                                      data-large-image-url="" data-large-image-width="1600"
-                                      data-large-image-height="947" data-description="" data-caption="" data-lang="">
-                                    <span class="visually-hidden">
-                                      San Minn, 'Express 2'. Oil on canvas, 1986.
-
-                                      - opens in a modal which shows a larger image and a caption
-                                    </span>
-                                  </button>
-                                  <div class="carousel--gallery__content">
-                                    <div class="media media-gallery media-image js-media">
-                                      <video autoplay muted loop loading="eager"
-                                          class="not-full-width lazyautosizes ls-is-cached lazyloaded" width="380"
-                                          height="500">
-                                        <source src="assets/video/videos/08.mp4" type="video/mp4">
-                                      </video>
-                                    </div>
-                                    <p class="carousel--gallery__item-title">
-                                      that
-                                    </p>
-                                  </div>
-                                </li>
-
-                                <li class="swiper-slide carousel--gallery__item" data-swiper-slide-index="7"
-                                    style="margin-right: 50px;">
-                                  <button type="button" class="carousel--gallery__button | js-photoswipe-item"
-                                      data-large-image-url="" data-large-image-width="1600"
-                                      data-large-image-height="947" data-description="" data-caption="" data-lang="">
-                                    <span class="visually-hidden">
-                                      San Minn, 'Express 2'. Oil on canvas, 1986.
-                                      - opens in a modal which shows a larger image and a caption
-                                    </span>
-                                  </button>
-                                  <div class="carousel--gallery__content">
-                                    <div class="media media-gallery media-image js-media">
-                                      <video autoplay muted loop loading="eager"
-                                          class="not-full-width lazyautosizes ls-is-cached lazyloaded" width="380"
-                                          height="500">
-                                        <source src="assets/video/videos/09.mp4" type="video/mp4">
-                                      </video>
-                                    </div>
-                                    <p class="carousel--gallery__item-title">
-                                      they're
-                                    </p>
-                                  </div>
-                                </li>
-
-
-                                <li class="swiper-slide carousel--gallery__item" data-swiper-slide-index="8"
-                                    style="margin-right: 50px;">
-                                  <button type="button" class="carousel--gallery__button | js-photoswipe-item"
-                                      data-large-image-url="" data-large-image-width="1600"
-                                      data-large-image-height="947" data-description="" data-caption="" data-lang="">
-                                    <span class="visually-hidden">
-                                      San Minn, 'Express 2'. Oil on canvas, 1986.
-                                      - opens in a modal which shows a larger image and a caption
-                                    </span>
-                                  </button>
-                                  <div class="carousel--gallery__content">
-                                    <div class="media media-gallery media-image js-media">
-                                      <video autoplay muted loop loading="eager"
-                                          class="not-full-width lazyautosizes ls-is-cached lazyloaded" width="380"
-                                          height="500">
-                                        <source src="assets/video/videos/13.mp4" type="video/mp4">
-                                      </video>
-                                    </div>
-                                    <p class="carousel--gallery__item-title">
-                                      gonna
-                                    </p>
-                                  </div>
-                                </li>
-
-
-                                <li class="swiper-slide carousel--gallery__item" data-swiper-slide-index="9"
-                                    style="margin-right: 50px;">
-                                  <button type="button" class="carousel--gallery__button | js-photoswipe-item"
-                                      data-large-image-url="" data-large-image-width="1600"
-                                      data-large-image-height="947" data-description="" data-caption="" data-lang="">
-                                    <span class="visually-hidden">
-                                      San Minn, 'Express 2'. Oil on canvas, 1986.
-                                      - opens in a modal which shows a larger image and a caption
-                                    </span>
-                                  </button>
-                                  <div class="carousel--gallery__content">
-                                    <div class="media media-gallery media-image js-media">
-                                      <video autoplay muted loop loading="eager"
-                                          class="not-full-width lazyautosizes ls-is-cached lazyloaded" width="380"
-                                          height="500">
-                                        <source src="assets/video/videos/16.mp4" type="video/mp4">
-                                      </video>
-                                    </div>
-                                    <p class="carousel--gallery__item-title">
-                                      throw it
-                                    </p>
-                                  </div>
-                                </li>
-
-                                <li class="swiper-slide carousel--gallery__item" data-swiper-slide-index="10"
-                                    style="margin-right: 50px;">
-                                  <button type="button" class="carousel--gallery__button | js-photoswipe-item"
-                                      data-large-image-url="" data-large-image-width="1600"
-                                      data-large-image-height="947" data-description="" data-caption="" data-lang="">
-                                    <span class="visually-hidden">
-                                      San Minn, 'Express 2'. Oil on canvas, 1986.
-                                      - opens in a modal which shows a larger image and a caption
-                                    </span>
-                                  </button>
-                                  <div class="carousel--gallery__content">
-                                    <div class="media media-gallery media-image js-media">
-                                      <video autoplay muted loop loading="eager"
-                                          class="not-full-width lazyautosizes ls-is-cached lazyloaded" width="380"
-                                          height="500">
-                                        <source src="assets/video/videos/17.mp4" type="video/mp4">
-                                      </video>
-                                    </div>
-                                    <p class="carousel--gallery__item-title">
-                                      back to
-                                    </p>
-                                  </div>
-                                </li>
-
-                                <li class="swiper-slide carousel--gallery__item" data-swiper-slide-index="11"
-                                    style="margin-right: 50px;">
-                                  <button type="button" class="carousel--gallery__button | js-photoswipe-item"
-                                      data-large-image-url="" data-large-image-width="1600"
-                                      data-large-image-height="947" data-description="" data-caption="" data-lang="">
-                                    <span class="visually-hidden">
-                                      San Minn, 'Express 2'. Oil on canvas, 1986.
-                                      - opens in a modal which shows a larger image and a caption
-                                    </span>
-                                  </button>
-                                  <div class="carousel--gallery__content">
-                                    <div class="media media-gallery media-image js-media">
-                                      <video autoplay muted loop loading="eager"
-                                          class="not-full-width lazyautosizes ls-is-cached lazyloaded" width="380"
-                                          height="500">
-                                        <source src="assets/video/videos/18.mp4" type="video/mp4">
-                                      </video>
-                                    </div>
-                                    <p class="carousel--gallery__item-title">
-                                      you
-                                    </p>
-                                  </div>
-                                </li>
-
-                                <li class="swiper-slide carousel--gallery__item" data-swiper-slide-index="12"
-                                    style="margin-right: 50px;">
-                                  <button type="button" class="carousel--gallery__button | js-photoswipe-item"
-                                      data-large-image-url="" data-large-image-width="1600"
-                                      data-large-image-height="947" data-description="" data-caption="" data-lang="">
-                                    <span class="visually-hidden">
-                                      San Minn, 'Express 2'. Oil on canvas, 1986.
-                                      - opens in a modal which shows a larger image and a caption
-                                    </span>
-                                  </button>
-                                  <div class="carousel--gallery__content">
-                                    <div class="media media-gallery media-image js-media">
-                                      <video autoplay muted loop loading="eager"
-                                          class="not-full-width lazyautosizes ls-is-cached lazyloaded" width="380"
-                                          height="500">
-                                        <source src="assets/video/videos/19.mp4" type="video/mp4">
-                                      </video>
-                                    </div>
-                                    <p class="carousel--gallery__item-title">
-                                      By
-                                    </p>
-                                  </div>
-                                </li>
-
-                                <li class="swiper-slide carousel--gallery__item" data-swiper-slide-index="13"
-                                    style="margin-right: 50px;">
-                                  <button type="button" class="carousel--gallery__button | js-photoswipe-item"
-                                      data-large-image-url="" data-large-image-width="1600"
-                                      data-large-image-height="947" data-description="" data-caption="" data-lang="">
-                                    <span class="visually-hidden">
-                                      San Minn, 'Express 2'. Oil on canvas, 1986.
-                                      - opens in a modal which shows a larger image and a caption
-                                    </span>
-                                  </button>
-                                  <div class="carousel--gallery__content">
-                                    <div class="media media-gallery media-image js-media">
-                                      <video autoplay muted loop loading="eager"
-                                          class="not-full-width lazyautosizes ls-is-cached lazyloaded" width="380"
-                                          height="500">
-                                        <source src="assets/video/videos/20.mp4" type="video/mp4">
-                                      </video>
-                                    </div>
-                                    <p class="carousel--gallery__item-title">
-                                      now,
-                                    </p>
-                                  </div>
-                                </li>
-
-                                <li class="swiper-slide carousel--gallery__item" data-swiper-slide-index="14"
-                                    style="margin-right: 50px;">
-                                  <button type="button" class="carousel--gallery__button | js-photoswipe-item"
-                                      data-large-image-url="" data-large-image-width="1600"
-                                      data-large-image-height="947" data-description="" data-caption="" data-lang="">
-                                    <span class="visually-hidden">
-                                      San Minn, 'Express 2'. Oil on canvas, 1986.
-                                      - opens in a modal which shows a larger image and a caption
-                                    </span>
-                                  </button>
-                                  <div class="carousel--gallery__content">
-                                    <div class="media media-gallery media-image js-media">
-                                      <video autoplay muted loop loading="eager"
-                                          class="not-full-width lazyautosizes ls-is-cached lazyloaded" width="380"
-                                          height="500">
-                                        <source src="assets/video/videos/22.mp4" type="video/mp4">
-                                      </video>
-                                    </div>
-                                    <p class="carousel--gallery__item-title">
-                                      you should've somehow realised
-                                    </p>
-                                  </div>
-                                </li>
-
-                                <li class="swiper-slide carousel--gallery__item" data-swiper-slide-index="15"
-                                    style="margin-right: 50px;">
-                                  <button type="button" class="carousel--gallery__button | js-photoswipe-item"
-                                      data-large-image-url="" data-large-image-width="1600"
-                                      data-large-image-height="947" data-description="" data-caption="" data-lang="">
-                                    <span class="visually-hidden">
-                                      San Minn, 'Express 2'. Oil on canvas, 1986.
-                                      - opens in a modal which shows a larger image and a caption
-                                    </span>
-                                  </button>
-                                  <div class="carousel--gallery__content">
-                                    <div class="media media-gallery media-image js-media">
-                                      <video autoplay muted loop loading="eager"
-                                          class="not-full-width lazyautosizes ls-is-cached lazyloaded" width="380"
-                                          height="500">
-                                        <source src="assets/video/videos/23.mp4" type="video/mp4">
-                                      </video>
-                                    </div>
-                                    <p class="carousel--gallery__item-title">
-                                      what you gotta do
-                                    </p>
-                                  </div>
-                                </li>
-
-
-                              </ul>
-                              <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-                            </div>
-                            <div
-                                class="swiper-navigation carousel__nav-container carousel__nav-container--centred-buttons">
-                              <button aria-label="Previous slide"
-                                  class="carousel__nav carousel__nav--prev | js-carousel-prev" tabindex="0"
-                                  role="button" aria-disabled="false">
-                                <svg class="icon icon--chevron icon--chevron-small" role="presentation"
-                                    focusable="false" aria-hidden="true">
-                                  <use xlink:href="#sprite-icon-chevron"></use>
-                                </svg>
-                                <svg class="icon icon--chevron icon--chevron-large" role="presentation"
-                                    focusable="false" aria-hidden="true">
-                                  <use xlink:href="#sprite-icon-chevron-large"></use>
-                                </svg>
-                              </button>
-                              <div
-                                  class="carousel__pagination | js-pagination-dots swiper-pagination-clickable swiper-pagination-bullets">
-                                <span class="swiper-pagination-bullet" tabindex="0" role="button"
-                                    aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet"
-                                    tabindex="0" role="button" aria-label="Go to slide 2"></span><span
-                                    class="swiper-pagination-bullet" tabindex="0" role="button"
-                                    aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet"
-                                    tabindex="0" role="button" aria-label="Go to slide 4"></span><span
-                                    class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
-                                    role="button" aria-label="Go to slide 5"></span><span
-                                    class="swiper-pagination-bullet" tabindex="0" role="button"
-                                    aria-label="Go to slide 6"></span><span class="swiper-pagination-bullet"
-                                    tabindex="0" role="button" aria-label="Go to slide 7"></span>
-                              </div>
-                              <button aria-label="Next slide"
-                                  class="carousel__nav carousel__nav--next | js-carousel-next" tabindex="0"
-                                  role="button" aria-disabled="false">
-                                <svg class="icon icon--chevron icon--chevron-small" role="presentation"
-                                    focusable="false" aria-hidden="true">
-                                  <use xlink:href="#sprite-icon-chevron"></use>
-                                </svg>
-                                <svg class="icon icon--chevron icon--chevron-large" role="presentation"
-                                    focusable="false" aria-hidden="true">
-                                  <use xlink:href="#sprite-icon-chevron-large"></use>
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
-                    <div class="spacer spacer--small-divider"></div>
-
-                    <section
-                        class="paragraph paragraph--type--slice-review paragraph--view-mode--default section section--slice-review section--bg-white review-slice"
-                        aria-labelledby="paragraph-10326-title">
-                      <div class="container">
-                        <div class="section__inner">
-                          <style>
-                            .review-slice.section--bg-white,
-                            .section--bg-white .review-slice__rating,
-                            .section--bg-white .review-slice__rating:after,
-                            .section--bg-white .review-slice__rating:before {
-                              background-color: #FAA21B;
-                            }
-                          </style>
-
-                          <h2 id="paragraph-10326-title" class="visually-hidden">
-                            What the press say
-                          </h2>
-                          <div class="carousel-container | js-carousel-container">
-                            <div class="carousel carousel--2-col swiper-container | js-carousel-2-col"
-                                data-items-length="3" data-slides-to-show="2" style="">
-                              <ul class="l-grid l-grid--3-col | review-slice__container swiper-wrapper">
-                                <li class="paragraph paragraph--type--review-item paragraph--view-mode--default l-grid__item swiper-slide review-slice__item"
-                                    style="">
-                                  <div class="review-slice__content review-slice__content--has-quote">
-                                    <div class="review-slice__rating review-slice__rating--4">
-                                      <span class="visually-hidden"> 4
-                                        of 5 stars</span>
-                                    </div>
-                                    <blockquote class="review-slice__quote">
-                                      <p><span><span>You should be the next Mathieu Malouf</span></span></p>
-                                      <cite>Pentti Monkkonen</cite>
-                                    </blockquote>
-                                  </div>
-                                </li>
-
-                                <li class="paragraph paragraph--type--review-item paragraph--view-mode--default l-grid__item swiper-slide review-slice__item"
-                                    style="">
-                                  <div class="review-slice__content review-slice__content--has-quote">
-
-                                    <div class="review-slice__rating review-slice__rating--2">
-                                      <span class="visually-hidden"> 2
-                                        of 5 stars</span>
-                                    </div>
-                                    <blockquote class="review-slice__quote">
-                                      <p>Don’t you have any publications?
-                                      </p>
-                                      <cite>Daniel Neofetou</cite>
-                                    </blockquote>
-                                  </div>
-                                </li>
-
-                                <li class="paragraph paragraph--type--review-item paragraph--view-mode--default l-grid__item swiper-slide review-slice__item"
-                                    style="">
-                                  <div class="review-slice__content review-slice__content--has-quote">
-                                    <div class="review-slice__rating review-slice__rating--5">
-                                      <span class="visually-hidden"> 5
-                                        of 5 stars</span>
-                                    </div>
-                                    <blockquote class="review-slice__quote">
-                                      <p>That’s life!</p>
-                                      <cite>Adam Curtis</cite>
-                                    </blockquote>
-                                  </div>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="carousel__nav-container carousel__nav-container--inline-buttons">
-                              <button aria-label="Previous slide"
-                                  class="carousel__nav carousel__nav--prev | js-carousel-prev" tabindex="0"
-                                  role="button" aria-disabled="true">
-                                <svg class="icon icon--chevron icon--chevron-small" role="presentation"
-                                    focusable="false" aria-hidden="true">
-                                  <use xlink:href="#sprite-icon-chevron"></use>
-                                </svg>
-                              </button>
-                              <div class="carousel__pagination | js-pagination-dots swiper-pagination-clickable"><span
-                                    class="swiper-pagination-bullet" tabindex="0" role="button"
-                                    aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet"
-                                    tabindex="0" role="button" aria-label="Go to slide 2"></span></div>
-                              <button aria-label="Next slide"
-                                  class="carousel__nav carousel__nav--next | js-carousel-next" tabindex="0"
-                                  role="button" aria-disabled="false">
-                                <svg class="icon icon--chevron icon--chevron-small" role="presentation"
-                                    focusable="false" aria-hidden="true">
-                                  <use xlink:href="#sprite-icon-chevron"></use>
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
-
-                        </div>
-                      </div>
-                    </section>
-
-
-                    <!-- <section
-                        class="paragraph paragraph--type--slice-review paragraph--view-mode--default section section--slice-review section--bg-white review-slice"
-                        aria-labelledby="paragraph-36656-title" style="background-color: #FAA21B">
-                      <div class="container">
-                        <div class="section__inner">
-                          <h2 id="paragraph-36656-title" class="visually-hidden">
-                            Reviews
-                          </h2>
-                          <div class="carousel-container | js-carousel-container">
-                            <div class="carousel carousel--2-col swiper-container | js-carousel-2-col"
-                                data-items-length="1" data-slides-to-show="2">
-                              <ul class="l-grid l-grid--1-col | review-slice__container swiper-wrapper">
-                                <li
-                                    class="paragraph paragraph--type--review-item paragraph--view-mode--default l-grid__item swiper-slide review-slice__item">
-                                  <div class="review-slice__content review-slice__content--has-quote">
-                                    <div class="review-slice__rating review-slice__rating--4"
-                                        style="background-color: #FAA21B;">
-                                      <span class="visually-hidden"> 4
-                                        of 5 stars</span>
-                                    </div>
-                                    <blockquote class="review-slice__quote">
-                                      <p>You could be the next Mathieu Malouf</p>
-                                      <cite>Pentti Monkkonen
-                                      </cite>
-                                    </blockquote>
-                                  </div>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </section> -->
-
-
                     <div class="spacer spacer--small-divider"></div>
                     <section
-                        class="accordion section--no-keyline-next js-accordion paragraph paragraph--type--slice-accordion paragraph--view-mode--default section section--slice-accordion section--bg-black"
-                        aria-labelledby="paragraph-34696-title">
-                      <div class="container">
-                        <a class="js-jump-link-anchor" id="access"></a>
-                        <div class="section__inner">
-                          <h2 id="paragraph-34696-title" class="section__title"
-                              data-gtm-vis-first-on-screen1766321_306="9671"
-                              data-gtm-vis-total-visible-time1766321_306="100" data-gtm-vis-has-fired1766321_306="1">
-                            Access
-                          </h2>
-
-                          <!--
-                          <div class="accordion__item | js-accordion-item" data-js-collapse-first="true">
-                            <h3 class="accordion__heading">
-                              <button class="accordion__button | js-accordion-btn" id="accordion-34693"
-                                  aria-expanded="false" aria-controls="accordion-content-34693">
-                                <svg class="icon icon--plus" role="presentation" focusable="false" aria-hidden="true">
-                                  <use xlink:href="#sprite-icon-plus"></use>
-                                </svg>
-                                <span> Exhibition layout
-                                </span>
-                              </button>
-                            </h3>
-                            <div class="accordion__content | js-accordion-content" id="accordion-content-34693"
-                                aria-hidden="true" aria-labelledby="accordion-34693">
-                              <p>View the <a href="assets/img/wonderwall.jpeg">exhibition
-                                  layout</a>.</p>
-                              <p>Find out more about&nbsp;<a href="#" data-entity-type="node"
-                                    data-entity-uuid="377d1eaf-caa3-4fba-8eeb-7eb62bb562e9"
-                                    data-entity-substitution="canonical"
-                                    title="Accessibility at the Museum">accessibility
-                                  at the Museum</a>.</p>
-                            </div>
-                          </div> -->
-
-
-
-                          <div class="accordion__item | js-accordion-item" data-js-collapse-first="true">
-                            <h3 class="accordion__heading">
-                              <button class="accordion__button | js-accordion-btn" id="accordion-36157"
-                                  aria-expanded="false" aria-controls="accordion-content-36157">
-                                <svg class="icon icon--plus" role="presentation" focusable="false" aria-hidden="true">
-                                  <use xlink:href="#sprite-icon-plus"></use>
-                                </svg>
-                                <span> Accessible resources
-                                </span>
-                              </button>
-                            </h3>
-                            <div class="accordion__content | js-accordion-content" id="accordion-content-36157"
-                                aria-hidden="true" aria-labelledby="accordion-36157">
-                              <p>The <a href="https://ma.magaluf.in/assets/docs/wonderwall-2023-press-release.pdf" rel="noopener noreferrer" target="_blank">press release<span class="visually-hidden"> (Opens
-                                    in
-                                    new
-                                    window)</span></a> was available to support your visit.</p>
-                              <!-- <div data-entity-type="media" data-entity-uuid="5975cae9-5e3b-403c-acba-ff2587f09765"
-                                  data-embed-button="document" data-entity-embed-display="view_mode:media.full"
-                                  data-langcode="en" data-entity-embed-display-settings="[]" class="embedded-entity"
-                                  xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <div class="media media-full media-document js-media">
-                                  <a href="#" class="media-document__link" download="">
-                                    <div class="media-document__icon-container">
-                                      <svg class="icon icon--download" role="presentation" focusable="false"
-                                          aria-hidden="true">
-                                        <use xlink:href="#sprite-icon-download"></use>
-                                      </svg>
-                                    </div>
-                                    <div class="media-document__content">
-                                      <span class="media-document__name"><span class="visually-hidden">Download
-                                        </span>Burma to Myanmar – large print guide</span>
-                                      <div class="media-document__meta">(PDF, 640.43 KB)</div>
-                                    </div>
-                                  </a>
-                                </div>
-                              </div> -->
-                              <p>
-                                Wonderwall (2023) was accompanied by a <a href="https://ma.magaluf.in/assets/docs/wonderwall-2023-press-release.pdf" rel="noopener noreferrer" target="_blank">plain English press
-                                  release</a>. This provided a description of Wonderwall (2023) in easy-to-understand
-                                sentences and it was strategically placed in the accesible restroom of Conway Hall to
-                                ensure maximum accesibility and inclusivity, enhancing support for all visitors.</p>
-                              <div data-entity-type="media" data-entity-uuid="a4bd3d96-ae78-420a-818b-b55e6843affe"
-                                  data-embed-button="document" data-entity-embed-display="view_mode:media.full"
-                                  data-langcode="en" data-entity-embed-display-settings="[]" class="embedded-entity"
-                                  xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <div class="media media-full media-document js-media">
-
-                                  <a href="assets/docs/wonderwall-2023-press-release.pdf.pdf" target="_blank" class="media-document__link" download="">
-                                    <div class="media-document__icon-container">
-                                      <svg class="icon icon--download" role="presentation" focusable="false"
-                                          aria-hidden="true">
-                                        <use xlink:href="#sprite-icon-download"></use>
-                                      </svg>
-                                    </div>
-                                    <div class="media-document__content">
-                                      <span class="media-document__name"><span class="visually-hidden">Download
-                                        </span>Wonderwall (2023) - Press Release </span>
-                                      <div class="media-document__meta">(PDF, 4.37 MB)</div>
-                                    </div>
-                                  </a>
-                                </div>
+                        class="paragraph paragraph--type--slice-content paragraph--view-mode--default section section--slice-content section--slice-content--align-left section--bg-black"
+                        aria-labelledby="paragraph-12806-title">
+                        <div class="custom-container">
+                          <div class="custom-row">
+                        
+                            <!-- Left Column -->
+                            <div class="custom-column">
+                              <img src="assets/img/mario/38672595622_3c89bc7226.webp" alt="Left Image" class="custom-image">
+                              <div class="custom-text">
+                                <p>Installation view, Room Debased, 2023</p>
                               </div>
                             </div>
+                        
+                            <!-- Right Column -->
+                            <div class="custom-column">
+                              <img src="assets/img/mario/IMG_9122.webp" alt="Right Image" class="custom-image">
+                              <div class="custom-text">
+                                <p>Untitled (Never Applied), 2023, extruded oil paint on concrete floor, dimensions variable</p>
+                              </div>
+                            </div>
+                        
                           </div>
-
+                          <div class="custom-row">
+                        
+                            <!-- Left Column -->
+                            <div class="custom-column">
+                              <img src="assets/img/mario/maxresdefault-2.jpg" alt="Left Image" class="custom-image">
+                              <div class="custom-text">
+                                <p>Installation view, Room Debased, 2023</p>
+                              </div>
+                            </div>
+                        
+                            <!-- Right Column -->
+                            <div class="custom-column">
+                              <img src="assets/img/mario/Captura de pantalla 2025-06-22 a las 15.22.20.webp" alt="Right Image" class="custom-image">
+                              <div class="custom-text">
+                                <p>Room Debased (detail), 2023, manually polished concrete floor, 30 × 30 cm</p>
+                              </div>
+                            </div>
+                        
+                          </div>
                         </div>
-                      </div>
+                        
+                        
+                        
                     </section>
                     <div class="spacer spacer--small-divider"></div>
                   </div>
@@ -3564,115 +2758,49 @@
           </div>
           <div>
             <div id="block-relatedcontent" class="section--bg-black section section--slice-teaser"
-                data-gtm-vis-recent-on-screen1766321_566="10923" data-gtm-vis-first-on-screen1766321_566="10923"
-                data-gtm-vis-total-visible-time1766321_566="100" data-gtm-vis-has-fired1766321_566="1"
-                data-gtm-vis-recent-on-screen1766321_173="10949" data-gtm-vis-first-on-screen1766321_173="10949"
-                data-gtm-vis-total-visible-time1766321_173="100" data-gtm-vis-has-fired1766321_173="1">
+                data-gtm-vis-recent-on-screen1766321_173="5379462" data-gtm-vis-first-on-screen1766321_173="5379462"
+                data-gtm-vis-total-visible-time1766321_173="100" data-gtm-vis-has-fired1766321_173="1"
+                data-gtm-vis-recent-on-screen1766321_566="5379482" data-gtm-vis-first-on-screen1766321_566="5379482"
+                data-gtm-vis-total-visible-time1766321_566="100" data-gtm-vis-has-fired1766321_566="1">
               <div class="container">
                 <div class="section__inner">
-                  <h2>You may also be interested in</h2>
+                  <h2>Other Shows</h2>
                   <div class="carousel-container | js-carousel-container">
                     <div class="teaser-listing carousel carousel--2-col swiper-container | js-carousel-2-col"
                         data-items-length="4" data-slides-to-show="2">
                       <ul class="l-grid l-grid--4-col | teaser-listing__teasers swiper-wrapper">
                         <li class="l-grid__item swiper-slide">
-                          <div class="teaser">
-                            <div class="teaser__wrapper">
-                              <div class="teaser__image-container">
-                                <div class="media media-teaser_landscape media-image js-media">
-                                  <img loading="eager" class="lazyautosizes lazyloaded" width="750" height="422"
-                                      data-sizes="auto" data-focal-position="center center" alt="" sizes="265px"
-                                      src="assets/img/spain.jpeg">
-                                </div>
-                              </div>
-                              <div class="teaser__content">
-                                <div class="teaser__content-push">
-                                  <h3 class="teaser__title">
-                                    <a href="spain.html" class="teaser__anchor">
-                                      <span><span>I'm going 2 Spain</span>
-                                      </span>
-                                    </a>
-                                  </h3>
-                                  <div class="teaser__summary">
-
-                                    The I'm Going to Spain paintings are about mapping a zone.
-                                    Wherein exists the conflation of the flag with the territory of 'the
-                                    thing'
-
-                                  </div>
-                                </div>
-                                <span class="teaser__button | button button--chevron"> Read more
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="l-grid__item swiper-slide">
                           <div class="teaser teaser--has-meta-top">
                             <div class="teaser__wrapper">
                               <div class="teaser__image-container">
                                 <div class="media media-teaser_landscape media-image js-media">
                                   <img loading="eager" class="lazyautosizes lazyloaded" width="750" height="422"
-                                      data-sizes="auto" data-focal-position="center center" alt="" sizes="265px"
-                                      src="assets/img/salon.jpg">
+                                      data-sizes="auto" data-focal-position="center center" alt="#" sizes="265px"
+                                      src="assets/img/roomdebased.png">
                                 </div>
                               </div>
                               <div class="teaser__content">
                                 <div class="teaser__content-push">
-                                  <!-- <div class="teaser__meta teaser__meta--top">
-                                    <div class="teaser__meta-item">
-                                      <span>Museum stories / 21 June 2023</span>
-                                    </div>
-                                  </div> -->
-                                  <h3 class="teaser__title">
-                                    <a href="salon.html" class="teaser__anchor">
-                                      <span><span>SALON</span>
-                                      </span>
-                                    </a>
-                                  </h3>
-                                  <div class="teaser__summary">
-                                    The original press release for SALON is now considered lost.
-SALON was prepared and installed in under 20 minutes.
+                                  <div class="teaser__defacer teaser__defacer-exhibition-events">
+                                    Past Show
                                   </div>
-                                </div>
-                                <span class="teaser__button | button button--chevron"> Read more
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="l-grid__item swiper-slide">
-                          <div class="teaser teaser--has-meta-top">
-                            <div class="teaser__wrapper">
-                              <div class="teaser__image-container">
-                                <div class="media media-teaser_landscape media-image js-media">
-                                  <img loading="eager" class="lazyautosizes lazyloaded" width="750" height="422"
-                                      data-sizes="auto" data-focal-position="center center" alt="" sizes="265px"
-                                      src="assets/img/evilorstupid.jpg">
-                                </div>
-                              </div>
-                              <div class="teaser__content">
-                                <div class="teaser__content-push">
-                                  <!-- <div class="teaser__meta teaser__meta--top">
-                                    <div class="teaser__meta-item">
-                                      <span>Objects in focus / 14 December 2017</span>
-                                    </div>
-                                  </div> -->
                                   <h3 class="teaser__title">
                                     <a href="evilorstupid.html" class="teaser__anchor">
-                                      <span><span>evil or stupid</span>
+                                      <span><span>evil or stupid </span>
+                                      </span>
+                                      <span class="visually-hidden">
+                                        . Past show
+                                        .
                                       </span>
                                     </a>
                                   </h3>
                                   <div class="teaser__summary">
-                                    My contribution titled "id say both" (2024) consists of a temporal
-                                    ready-made. I provided the
-                                    organizers of the exhibition with three wash theatre lights and an union
-                                    jack themed guitar.
+                                    Hello, I walked out to the location, hoping to catch up with people and see some work.
                                   </div>
                                 </div>
-                                <span class="teaser__button | button button--chevron"> Read more
-                                </span>
+                                <span class="teaser__button | button button--chevron">Find out more <span
+                                      class="visually-hidden">about <span>evil or stupid </span>
+                                  </span></span>
                               </div>
                             </div>
                           </div>
@@ -3682,22 +2810,97 @@ SALON was prepared and installed in under 20 minutes.
                             <div class="teaser__wrapper">
                               <div class="teaser__image-container">
                                 <div class="media media-teaser_landscape media-image js-media">
-                                  <img loading="eager" class="lazyautosizes lazyloaded" width="750" height="422" data-sizes="auto" data-focal-position="center right" alt="" sizes="559px" src="assets/img/Customize-your-studio-visit.jpg">
+                                  <img loading="eager" class="lazyautosizes lazyloaded" width="750" height="422"
+                                      data-sizes="auto" data-focal-position="center center" alt="#" sizes="265px"
+                                      src="assets/img/roomdebased.png">
                                 </div>
                               </div>
                               <div class="teaser__content">
                                 <div class="teaser__content-push">
                                   <h3 class="teaser__title">
-                                    <a href="events.html" class="teaser__anchor">
-                                      <span><span>Visit</span>
+                                    <a href="shows.html" class="teaser__anchor">
+                                      <span><span>Past Shows</span>
                                       </span>
                                     </a>
                                   </h3>
                                   <div class="teaser__summary">
-                                    Find upcoming availability, travel details, and information about Mario Suardiaz's
-                                    activities.
+                                    Take a look at our past shows and enjoy the articles, videos and image
+                                    galleries still available to view online. </div>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="l-grid__item swiper-slide">
+                          <div class="teaser teaser--has-meta-top">
+                            <div class="teaser__wrapper">
+                              <div class="teaser__image-container">
+                                <div class="media media-teaser_landscape media-image js-media">
+                                  <img loading="eager" class="lazyautosizes lazyloaded" width="750" height="422"
+                                      data-sizes="auto" data-focal-position="center center" alt="#" sizes="265px"
+                                      src="assets/img/roomdebased.png">
+                                </div>
+                              </div>
+
+                              <div class="teaser__content">
+                                <div class="teaser__content-push">
+                                  <div class="teaser__defacer teaser__defacer-exhibition-events">
+                                    Past show
+                                  </div>
+                                  <h3 class="teaser__title">
+                                    <a href="magaluf.html" class="teaser__anchor">
+                                      <span><span>The Magaluf Biennale: Washed Up</span>
+                                      </span>
+                                      <span class="visually-hidden">
+                                        . Past Show
+                                        .
+                                      </span>
+                                    </a>
+                                  </h3>
+                                  <div class="teaser__summary">
+                                    A WTF EXHIBITION ON THE BEACH WHERE ART GOES FULL LOBOTOMY
                                   </div>
                                 </div>
+                                <span class="teaser__button | button button--chevron">Find out more <span
+                                      class="visually-hidden">about <span>The Magaluf Biennale: Washed Up</span>
+                                  </span></span>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="l-grid__item swiper-slide">
+                          <div class="teaser teaser--has-meta-top">
+                            <div class="teaser__wrapper">
+                              <div class="teaser__image-container">
+                                <div class="media media-teaser_landscape media-image js-media">
+                                  <img loading="eager" class="lazyautosizes lazyloaded" width="750" height="422"
+                                      data-sizes="auto" data-focal-position="center center" alt="#" sizes="265px"
+                                      src="assets/img/roomdebased.png">
+                                </div>
+                              </div>
+                              <div class="teaser__content">
+                                <div class="teaser__content-push">
+                                  <div class="teaser__defacer teaser__defacer-exhibition-events">
+                                    Buy now
+                                  </div>
+                                  <h3 class="teaser__title">
+                                    <a href="resort-fiction.html" class="teaser__anchor">
+                                      <span><span>Resort Fiction (2020)</span>
+                                      </span>
+                                      <span class="visually-hidden">
+                                        . Buy now
+                                        .
+                                      </span>
+                                    </a>
+                                  </h3>
+                                  <div class="teaser__summary">
+                                    A self-reflexive artifact marking the endpoint of a five-year engagement (2015–2020) with the apparatus of cultural distribution—artist, curator, promoter, gallerist, producer.
+                                  </div>
+                                </div>
+                                <span class="teaser__button | button button--chevron">Find out more <span
+                                      class="visually-hidden">about <span>Hiroshige: artist of the open road</span>
+                                  </span></span>
                               </div>
                             </div>
                           </div>
@@ -3710,7 +2913,6 @@ SALON was prepared and installed in under 20 minutes.
             </div>
           </div>
         </main>
-        <!-- Main End -->
 
 
         <!-- Footer Start -->
@@ -4028,6 +3230,7 @@ SALON was prepared and installed in under 20 minutes.
   <script src="assets/js/drupal.js" data-cookieconsent="ignore"></script>
   <script src="assets/js/drupal.init.js" data-cookieconsent="ignore"></script>
   <script src="assets/js/script.js"></script>
+
 </body>
 
 </html>
