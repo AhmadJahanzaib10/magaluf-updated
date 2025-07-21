@@ -2471,10 +2471,10 @@
                       <p>Experience the art of Mario Suardiaz</p>
                     </div>
                     <div class="hero__button-container">
-                      <button id="book-studio" class="hero__button button button--chevron"
+                      <a href="mailto:studio@mariosuardiaz.art" class="hero__button button button--chevron"
                           data-tracking="homepage-hero-button">
                         <span>Book your studio visit</span>
-                      </button>
+                      </a>
                     </div>
                   </div>
                   <div class="hero__controls">
@@ -3426,14 +3426,6 @@
         </footer>
         <!-- Footer End -->
 
-        <div id="popupOverlay">
-          <div id="popupBox">
-            <h3>Contact to book your studio visit</h3>
-            <a href="mailto:studio@mariosuardiaz.art">studio@mariosuardiaz.art</a>
-            <button id="closePopupBtn">Close</button>
-          </div>
-        </div>
-
       </div>
     </div>
   </div>
@@ -3491,26 +3483,6 @@
   <script src="assets/js/drupal.js" data-cookieconsent="ignore"></script>
   <script src="assets/js/drupal.init.js" data-cookieconsent="ignore"></script>
   <script src="assets/js/script.js"></script>
-  <script>
-    const openBtn = document.getElementById('book-studio');
-    const closeBtn = document.getElementById('closePopupBtn');
-    const overlay = document.getElementById('popupOverlay');
-
-    openBtn.addEventListener('click', () => {
-      overlay.style.display = 'block';
-    });
-
-    closeBtn.addEventListener('click', () => {
-      overlay.style.display = 'none';
-    });
-
-    // Optional: Close when clicking outside the popup box
-    overlay.addEventListener('click', (e) => {
-      if (e.target === overlay) {
-        overlay.style.display = 'none';
-      }
-    });
-  </script>
 
 </body>
 
