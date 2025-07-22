@@ -1884,39 +1884,45 @@
     .hero__title strong {
       color: #EB0000
     }
+
     /* CSS */
-.audio-container {
-  margin: 40px auto;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  position: relative;
-}
-.audio-container img{
-  width: 30px !important;
-  position: absolute;
-  left: 30px;
-  top: 50%;
-  transform: translateY(-60%);
-  z-index: 999;
-  cursor: pointer;
-}
+    .audio-container {
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      position: relative;
+    }
 
-.audio-container h2 {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  color: #222;
-}
+    .audio-container img {
+      width: 30px !important;
+      position: absolute;
+      left: 30px;
+      top: 50%;
+      transform: translateY(-60%);
+      z-index: 999;
+      cursor: pointer;
+    }
 
-audio {
-  width: 100%;
-  background: black;
-  outline: none;
-}
+    .audio-container h2 {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: #222;
+    }
 
-    @media screen and (max-width: 450px) {
-      #video-salon{
-        width: 100%;
+    audio {
+      width: 100%;
+      background: black;
+      outline: none;
+    }
+    #gif-salon{
+      width: auto;
+      height: 200px;
+    }
+    @media screen and (max-width: 500px) {
+      #gif-salon{
+        width: 100% !important;
+        height: auto !important;
       }
     }
   </style>
@@ -2231,7 +2237,7 @@ audio {
       <div class="layout-container">
 
         <header
-            class="[ region region-header ] header print-none | js-header-main js-col-offset-item js-col-offset-item--main-header">
+          class="[ region region-header ] header print-none | js-header-main js-col-offset-item js-col-offset-item--main-header">
           <div class="container">
             <div class="header__inner">
               <div>
@@ -2254,7 +2260,7 @@ audio {
               <div class="header__menu-container | js-menu-container">
                 <div>
                   <nav class='menu-primary | js-menu-primary' aria-labelledby="block-numiko-mainnavigation-menu"
-                      id="block-numiko-mainnavigation">
+                    id="block-numiko-mainnavigation">
                     <h2 class="visually-hidden" id="block-numiko-mainnavigation-menu">Main navigation</h2>
                     <div class="js-drilldown"> <!-- required -->
                       <div class="js-drilldown-container"> <!-- required -->
@@ -2333,7 +2339,7 @@ audio {
                           </li>
                           <li class="menu__item menu__item--expanded menu__item--level-0">
                             <button
-                                class="menu__link menu__link--level-0 menu__toggle menu__link--expanded js-drilldown-button">
+                              class="menu__link menu__link--level-0 menu__toggle menu__link--expanded js-drilldown-button">
                               <span>
                                 Support us
                               </span>
@@ -2347,7 +2353,7 @@ audio {
                                   <li class="menu__item menu__item--back | js-drilldown-back">
                                     <button type="button" class="menu__toggle menu__toggle--back | js-drilldown-button">
                                       <svg class="icon icon--chevron" role="presentation" focusable="false"
-                                          aria-hidden="true">
+                                        aria-hidden="true">
                                         <use xlink:href="#sprite-icon-chevron"></use>
                                       </svg>
                                       <span>Back <span class="visually-hidden">to previous menu</span></span>
@@ -2357,11 +2363,11 @@ audio {
                                     <div class="menu__link menu__link--main menu__link--level-1 menu__toggle">
                                       <span>
                                         <span class="menu__sub-nav-indicator" role="presentation"
-                                            aria-hidden="true">—</span>
+                                          aria-hidden="true">—</span>
                                         Support us
                                       </span>
                                       <svg class="icon icon--chevron" role="presentation" focusable="false"
-                                          aria-hidden="true">
+                                        aria-hidden="true">
                                         <use xlink:href="#sprite-icon-chevron"></use>
                                       </svg>
                                     </div>
@@ -2370,11 +2376,11 @@ audio {
                                     <a href="donate.html" class="menu__link menu__link--level-1 menu__toggle">
                                       <span>
                                         <span class="menu__sub-nav-indicator" role="presentation"
-                                            aria-hidden="true">—</span>
+                                          aria-hidden="true">—</span>
                                         Donate
                                       </span>
                                       <svg class="icon icon--chevron" role="presentation" focusable="false"
-                                          aria-hidden="true">
+                                        aria-hidden="true">
                                         <use xlink:href="#sprite-icon-chevron"></use>
                                       </svg>
                                     </a>
@@ -2394,7 +2400,7 @@ audio {
                     <ul class="menu menu--level-0 menu--header-secondary">
                       <li class="menu-item menu__item--level-0">
                         <a class="menu__link menu__link--level-0 menu__link--shop js-shop" href="shop.html"
-                            target="_blank">
+                          target="_blank">
                           <svg class="icon icon--shop" role="presentation" focusable="false" aria-hidden="true">
                             <use xlink:href="#sprite-icon-shop"></use>
                           </svg>
@@ -2605,7 +2611,8 @@ audio {
                         </div>
                         <div
                           class="intro-link--button paragraph paragraph--type--info-link paragraph--view-mode--default">
-                          <a data-tracking="exhibition-cta" class="button button--chevron" href="shows.html#current-shows">
+                          <a data-tracking="exhibition-cta" class="button button--chevron"
+                            href="shows.html#current-shows">
                             <span>See current shows</span>
                           </a>
                         </div>
@@ -2625,11 +2632,26 @@ audio {
 
                       <div class="wysiwyg">
                         <p>The original press release for SALON is now considered lost. <br>
-                         SALON was prepared and installed in under 20 minutes. The exhibition was assembled using materials found on site or sourced within walking distance. The pineapple was purchased at the Tesco Express located next to the exhibition space. The plinth was already in the room — a handmade structure of unclear origin, left from a previous use. No modifications were made to either element. No transport was arranged. No production budget was allocated. No preparatory documentation exists. The exhibition was not premeditated. It responded to conditions present at the time: available space, available objects, and the potential presence of visitors. The artists described SALON as “a show about space and improvisation.” or the "dignity of das Ding" [2] by Mario Suardiaz. The emphasis was on what could be done with what was already at hand, quickly. The text below, adapted by Richard Parry from public sources, was added later. It relates to the symbolic history of the pineapple in England. It was not intended as a curatorial statement, but as contextual material filed alongside the work. It is included here to satisfy expectations of historical or cultural framing, which remain persistent even when irrelevant.</p>
-                        <p>A sound work was positioned at the threshold of SALON. It remains a vital part of SALON and can be heard <span id="audioToggle" style="cursor: pointer;">[here]</span>:</p>
+                          SALON was prepared and installed in under 20 minutes. The exhibition was assembled using
+                          materials found on site or sourced within walking distance. The pineapple was purchased at the
+                          Tesco Express located next to the exhibition space. The plinth was already in the room — a
+                          handmade structure of unclear origin, left from a previous use. No modifications were made to
+                          either element. No transport was arranged. No production budget was allocated. No preparatory
+                          documentation exists. The exhibition was not premeditated. It responded to conditions present
+                          at the time: available space, available objects, and the potential presence of visitors. The
+                          artists described SALON as “a show about space and improvisation.” or the "dignity of das
+                          Ding" [2] by Mario Suardiaz. The emphasis was on what could be done with what was already at
+                          hand, quickly. The text below, adapted by Richard Parry from public sources, was added later.
+                          It relates to the symbolic history of the pineapple in England. It was not intended as a
+                          curatorial statement, but as contextual material filed alongside the work. It is included here
+                          to satisfy expectations of historical or cultural framing, which remain persistent even when
+                          irrelevant.</p>
+                        <p>A sound work was positioned at the threshold of SALON. It remains a vital part of SALON and
+                          can be heard <span id="audioToggle" style="cursor: pointer;">[here]</span>:</p>
                         <div class="audio-container">
                           <!-- <img src="assets/img/mario/play.png" id="playBtn" data-state="pause" alt=""> -->
-                          <audio src="assets/audio/PlanningApplicationtochangetheuseofLewishamWayCommunityCentre.mp3" id="audio" controls loop></audio>
+                          <audio src="assets/audio/PlanningApplicationtochangetheuseofLewishamWayCommunityCentre.mp3"
+                            id="audio" controls loop></audio>
                         </div>
                       </div>
                     </div>
@@ -2676,7 +2698,7 @@ audio {
                         srcset="assets/img/salon-1.JPG 400w, assets/img/salon-1.JPG 750w, aassets/img/salon-1.JPG 1000w, assets/img/salon-1.JPG 1300w,assets/img/salon-1.JPG 1480w"
                         sizes="100vw" width="1480" height="1020" src="assets/img/salon-1.JPG"
                         alt="Landscape image of two children by Queen Victoria">
-                      <figcaption>                       
+                      <figcaption>
                         Installation view, <em>SALON</em>, 2022
                       </figcaption>
 
@@ -2694,7 +2716,7 @@ audio {
 
           </section>
 
-          
+
           <section
             class="paragraph paragraph--type--slice-content paragraph--view-mode--default section section--slice-content section--slice-content--align-right section--bg-white"
             aria-labelledby="paragraph-12176-title">
@@ -2723,7 +2745,7 @@ audio {
                         sizes="100vw" width="865" height="557" src="assets/img/salon-2.JPG"
                         alt="Two images, one cut from the other, with strips of bending colours, from blue, red and green on a white canvas. ">
 
-                      <figcaption>                      
+                      <figcaption>
                         Work detail: <em>Untitled (Pineapple on Plinth)</em>
                         Found plinth, commercial pineapple with barcode tag.
                         Plinth: approx. 90 × 30 × 30 cm
@@ -2766,9 +2788,8 @@ audio {
                     <figure class="media media-embed media-image js-media">
 
                       <img loading="eager" class="not-full-width ls-is-cached lazyloaded"
-                        srcset="assets/img/salon-3.JPG 400w" sizes="100vw"
-                        width="400" height="557" src="assets/img/salon-3.JPG"
-                        alt="A Raphael print with four naked male figures.">
+                        srcset="assets/img/salon-3.JPG 400w" sizes="100vw" width="400" height="557"
+                        src="assets/img/salon-3.JPG" alt="A Raphael print with four naked male figures.">
 
                       <figcaption>
                         Installation view, <em><a style="background: none;">SALON, </a></em> 2022
@@ -2811,7 +2832,7 @@ audio {
                   <div class="paragraph paragraph--type--embedded-media paragraph--view-mode--default">
                     <figure class="media media-embed media-image js-media">
 
-<img src="assets/video/video-gif-salon.gif" alt="">
+                      <img src="assets/video/video-gif-salon.gif" alt="" id="gif-salon">
 
                     </figure>
 
@@ -3382,7 +3403,8 @@ Location undocumented
                                     </a>
                                   </h3>
                                   <div class="teaser__summary">
-                                    Sand (2022) unearths the quiet residue of leisure culture, repurposing its discarded fragments into a tableau of cyclical consumption.
+                                    Sand (2022) unearths the quiet residue of leisure culture, repurposing its discarded
+                                    fragments into a tableau of cyclical consumption.
                                   </div>
                                 </div>
                                 <span class="teaser__button | button button--chevron">Find out more <span
@@ -3418,7 +3440,8 @@ Location undocumented
                                     </a>
                                   </h3>
                                   <div class="teaser__summary">
-                                    Hello, I walked out to the location, hoping to catch up with people and see some work. Actually just disappointing not to see any people or artwork.
+                                    Hello, I walked out to the location, hoping to catch up with people and see some
+                                    work. Actually just disappointing not to see any people or artwork.
                                   </div>
                                 </div>
                                 <span class="teaser__button | button button--chevron">Find out more <span
